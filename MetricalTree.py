@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# 07/29/15: 12:15-1:15
 
 import os.path
 try:
@@ -151,6 +152,15 @@ class LexicalMetricalTree(Tree):
   #=====================================================================
   def set_lexical_stress(self, lexical_stress):
     
+    # Override the default lexical_stress for prepositions
+    if lexical_stress is None and self._preterm:
+      if self._cat == 'IN':
+        lexical_stress = False
+      elif self._cat.startswith('R'):
+        lexical_stress = True
+      # TODO uncomment
+      else:
+        print self
     self._lex_stress = lexical_stress
     self._label = '%s/%s' % (self._cat, str(self._lex_stress))
 
@@ -209,7 +219,6 @@ class LexicalMetricalTree(Tree):
       return type(self)(self._cat, self, lexical_stress=self._lex_stress)
     else:
       return type(self).convert(self)
-
 
 #***********************************************************************
 class PhrasalMetricalTree(LexicalMetricalTree):
@@ -282,11 +291,12 @@ if __name__ == '__main__':
   XMX       = '1g'
   FILE      = None
   
+  # $ python MetricalTree.py -c /home/tdozat/Scratch/Metrics/stanford-parser-full-2015-04-20/ -m RNN
   i = 0
   while i < len(sys.argv):
     if   sys.argv[i] == '-c' or sys.argv[i] == '--classpath':
       CLASSPATH = sys.argv.pop(i+1)
-      # /home/tdozat/Scratch/Metrics/stanford-parser-full-2015-04-20/*
+      # /home/tdozat/Scratch/Metrics/stanford-parser-full-2015-04-20/
     elif sys.argv[i] == '-m' or sys.argv[i] == '--model':
       MODEL = sys.argv.pop(i+1)
     elif sys.argv[i] == '-x' or sys.argv[i] == '--mx':
@@ -302,18 +312,26 @@ if __name__ == '__main__':
   # THIS LINE IS A HACK--should import "find_jar_iter" and find it that way
   parser._model_jar += os.path.pathsep+CLASSPATH+'ejml-0.23.jar'
   ###
-  sentences = parser.raw_parse_sents(("Hello, My name's Melroy.",
-    "What's your name?",
-    "In a hole in the ground there lived a hobbit.",
-    "Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole and that means comfort.",
-    "It had a perfectly round door like a porthole, painted green, with a shiny yellow brass knob in the exact middle.",
-    "The door opened on to a tube-shaped hall like a tunnel; a very comfortable tunnel without smoke, with panelled walls, and floors tiled and carpeted, provided with polished chairs, and lots and lots of pegs for hats and coats - the hobbit was fond of visitors."))
+
+  import re
+  with open('Nixon.txt') as f:
+    textfile = f.read()
+  textfile = re.sub('\. ', '\.\n', textfile)
+  textfile = re.sub(';', ';\n', textfile)
+  textfile = re.sub(':', ':\n', textfile)
+  textfile = re.sub('--', '--\n', textfile)
+  sentences = parser.raw_parse_sents([textfile])
+  stuff = []
   for line in sentences:
     for sentence in line:
+      print sentence
+      print 'Ambiguous preterminals:'
       sentence = LexicalMetricalTree.convert(sentence)
       sentence.contract()
       all_trees = sentence.generate_trees()
+      print 'No. of sents:'
       print len(all_trees)
+      stuff.append(len(all_trees))
       for tree in all_trees:
         tree = tree.copy(deep=True)
         tree.make_absolute()
@@ -322,3 +340,5 @@ if __name__ == '__main__':
           p.append('(%s %s)' % (preterm.label(), preterm[0]))
         #print ' '.join(p)
 
+  import numpy as np
+  print 'Average no. of sents: %.03f' % np.mean(stuff)
