@@ -1,14 +1,1 @@
-m
-s
-ll
-d
-nt
-re
-ve
-'m
-'s
-'ll
-'d
-n't
-'re
-'ve
+("m", "s", "ll", "d", "nt", "re", "ve", "'m", "'s", "'ll", "'d", "n't", "'re", "'ve")
