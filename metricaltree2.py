@@ -1,12 +1,10 @@
 #!/usr/bin/env python
-#8/12/15: 1230-1345 1415-1615
-#8/13/15: 1615-2030 2130-2330
-#8/14/15: 1415-1730
-#8/31/15: 1200-????
+#8/31/15: 1200-1600
+
 import os
 import nltk
 from nltk.tree import Tree
-from deptree import DependencyTree, DependencyTreeParser
+from deptree import DependencyTree, DependencyTreeParser, punct_split
 
 DATE = '2015-04-20'
 MODELS_VERSION = '3.5.2'
@@ -19,21 +17,41 @@ os.environ['STANFORD_EJML']   = 'stanford-parser-full-%s/ejml-%s.jar' % (DATE, E
 #***********************************************************************
 # Metrical Tree class
 class MetricalTree(DependencyTree):
-  """"""
+  """
+    Step 1: Parse the string into a DependencyTree using the DependencyTreeParser from the deptree module
+    Step 2: Convert the DependencyTree into a MetricalTree
+    Step 3: Set the lexical stress
+    Step 4: Disambiguate 
+    Step 6: Set the phrasal stress
+    Step 7: Set the total stress
+    Example:
+      >>> parser = DependencyTreeParser()
+      >>> sent_dtree = parser.raw_parse(sent_str)
+      >>> for tree in sent_dtree:
+      ...   sent_mtree = MetricalTree.convert(t)
+      ...   sent_mtree.set_lstress()
+      ...   sent_mtrees = sent_mtree.disambiguate()
+      ...   for i, sent_mtree in enumerate(sent_mtrees):
+      ...     sent_mtrees[i] = sent_mtree.copy(deep=True)
+      ...     sent_mtree.set_stress()
+  """
   
-  _unstressedLTags = ('CC', 'DT', 'EX', 'IN', 'MD', 'POS', 'PRP', 'PRP$', 'TO', 'UH', 'WP$')
-  _unstressedLDeps = ('cop', 'aux', 'auxpass')
-  _unstressedPTags = ('CC', 'DT', 'EX', 'IN', 'POS', 'PRP', 'TO', 'UH')
-  _unstressedPDeps = tuple()
+  _unstressedWords = ('it',)
+  _unstressedTags  = ('CC', 'PRP$', 'TO', 'UH', 'DT')
+  _unstressedDeps  = ('det', 'expl', 'cc', 'mark')
+  _ambiguousWords = ('this', 'that', 'these', 'those')
+  _ambiguousTags  = ('MD', 'IN', 'PRP', 'WP$', 'PDT', 'WDT', 'WP', 'WRB')
+  _ambiguousDeps  = ('cop', 'neg', 'aux', 'auxpass')
+  _stressedWords = tuple()
   
   #=====================================================================
   # Initialize
-  def __init__(self, node, children, dep=None, lstress=None, pstress=None, stress=None):
+  def __init__(self, node, children, dep=None, lstress=0, pstress=None, stress=None):
     """"""
     
-    self._lstress = 0
-    self._pstress = None
-    self._stress = None
+    self._lstress = lstress
+    self._pstress = pstress
+    self._stress = stress
     super(MetricalTree, self).__init__(node, children, dep)
     self.set_label()
     
@@ -88,18 +106,28 @@ class MetricalTree(DependencyTree):
     for preterminal in self.preterminals(leaves=True):
       if leaves:
         if arto:
-          yield (-(preterminal._stress-1) if preterminal._stress is not None else None, preterminal[0])
+          if preterminal._stress is None:
+            yield (None, preterminal[0])
+          elif preterminal._lstress == -1:
+            yield (0, preterminal[0])
+          else:
+            yield (-(preterminal._stress-1), preterminal[0])
         else:
           yield (preterminal._stress, preterminal[0])
       else:
         if arto:
-          yield -(preterminal._stress-1) if preterminal._stress is not None else None
+          if preterminal._stress is None:
+            yield None
+          elif preterminal._lstress == -1:
+            yield 0
+          else:
+            yield -(preterminal._stress-1)
         else:
           yield preterminal._stress
 
   #=====================================================================
   # Set the lexical stress of the node
-  def set_lstress(self):  
+  def set_lstress(self):
     """"""
     
     if self._preterm:
@@ -107,12 +135,29 @@ class MetricalTree(DependencyTree):
         self._lstress = None
       elif self._cat in super(MetricalTree, self)._punctTags:
         self._lstress = None
-      elif self._cat in MetricalTree._unstressedLTags:
+      
+      elif self[0].lower() in MetricalTree._unstressedWords:
         self._lstress = -1
-      elif self._dep in MetricalTree._unstressedLDeps:
+      elif self[0].lower() in MetricalTree._ambiguousWords:
+        self._lstress = -.5
+      elif self[0].lower() in MetricalTree._stressedWords:
+        self._lstress = 0
+        
+      elif self._cat in MetricalTree._unstressedTags:
         self._lstress = -1
+      elif self._cat in MetricalTree._ambiguousTags:
+        self._lstress = -.5
+        
+      elif self._dep in MetricalTree._unstressedDeps:
+        self._lstress = -1
+      elif self._dep in MetricalTree._ambiguousDeps:
+        self._lstress = -.5
+        
       else:
         self._lstress = 0
+      
+      if self[0].lower() == 'that' and (self._cat == 'DT' or self._dep == 'det'):
+        self._lstress = -.5
     else:
       for child in self:
         child.set_lstress()
@@ -125,16 +170,9 @@ class MetricalTree(DependencyTree):
     
     # Basis
     if self._preterm:
-      if self[0].lower() in super(MetricalTree, self)._contractables:
-        self._pstress = None
-      elif self._cat in super(MetricalTree, self)._punctTags:
-        self._pstress = None
-      elif self._cat in MetricalTree._unstressedPTags:
-        self._pstress = -1
-      elif self._dep in MetricalTree._unstressedPDeps:
-        self._pstress = -1
-      else:
-        self._pstress = 0
+      try: assert self._lstress != -.5
+      except: raise ValueError('The tree must be disambiguated before assigning phrasal stress')
+      self._pstress = self._lstress
     else:
       # Recurse
       for child in self:
@@ -242,6 +280,32 @@ class MetricalTree(DependencyTree):
       return tree
 
   #=====================================================================
+  # Lexically disambiguate an ambiguous Metrical Tree
+  def disambiguate(self):
+    """"""
+    
+    if self._preterm:
+      if self._lstress != -.5:
+        return [self.copy()]
+      else:
+        alts = []
+        self._lstress = -1
+        alts.append(self.copy())
+        self._lstress = 0
+        alts.append(self.copy())
+        self._lstress = -.5
+        return alts
+    else:
+      alts = [[]]
+      for child in self:
+        child_alts = child.disambiguate()
+        for i in xrange(len(alts)):
+          alt = alts.pop(0)
+          for child_alt in child_alts:
+            alts.append(alt + [child_alt])
+      return [MetricalTree(self._cat, alt, self._dep) for alt in alts]
+  
+  #=====================================================================
   # Copy the tree
   def copy(self, deep=False):
     """"""
@@ -257,32 +321,44 @@ if __name__ == '__main__':
   """"""
   
   import os
+  import re
+  import time
   parser = DependencyTreeParser(model_path='stanford-parser-full-%s/edu/stanford/nlp/models/lexparser/englishRNN.ser.gz' % DATE)
   sents = []
   print '=== The Hobbit Opening ==='
   with open('Hobbit.txt') as f:
     for line in f:
-      sents.append(line)
+      sents.extend(punct_split(line))
   sentences = parser.raw_parse_sents(sents)
+  start = time.time()
   for tree in sentences:
     for t in tree:
       t = MetricalTree.convert(t)
       t.set_lstress()
-      t.set_pstress()
-      t.set_stress()
-      for stress in t.stresses(arto=True):
-        print '%s %s' % (str(stress[0]).ljust(4), stress[1])
+      print t
+      ts = t.disambiguate()
+      for t in ts:
+        t.set_pstress()
+        t.set_stress()
+      for stress1, stress2 in zip(ts[0].stresses(arto=True), ts[-1].stresses(arto=True)):
+        print '%s %s %s' % (str(stress1[0]).ljust(4), str(stress2[0]).ljust(4), stress1[1])
+      print 'no. of parses: %d\n' % len(ts)
+  sents = []
   print '\n=== The Nixon Inauguration ==='
   with open('Nixon.txt') as f:
     for line in f:
-      sents.append(line)
+      sents.extend(punct_split(line))
   sentences = parser.raw_parse_sents(sents)
   for tree in sentences:
     for t in tree:
       t = MetricalTree.convert(t)
       t.set_lstress()
-      t.set_pstress()
-      t.set_stress()
-      for stress in t.stresses(arto=True):
-        print '%s %s' % (str(stress[0]).ljust(4), stress[1])
+      print t
+      ts = t.disambiguate()
+      for t in ts:
+        t.set_pstress()
+        t.set_stress()
+      for stress1, stress2 in zip(ts[0].stresses(arto=True), ts[-1].stresses(arto=True)):
+        print '%s %s %s' % (str(stress1[0]).ljust(4), str(stress2[0]).ljust(4), stress1[1])
+      print 'no. of parses: %d\n' % len(ts)
   print 'Works!'

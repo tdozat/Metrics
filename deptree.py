@@ -26,6 +26,16 @@ from nltk.parse.api import ParserI
 _stanford_url = 'http://nlp.stanford.edu/software/lex-parser.shtml'
 
 #***********************************************************************
+# Split a text on certain punctuation
+def punct_split(s):
+  """"""
+  
+  s = s.strip()
+  s = re.sub('([.:;]|--+)', '\g<1>\n', s)
+  s = s.split('\n')
+  return s
+
+#***********************************************************************
 # Dependency-augmented syntactic tree class
 class DependencyTree(Tree):
   """"""
