@@ -17,6 +17,7 @@ import re
 from subprocess import PIPE
 
 import nltk
+import nltk.data
 from nltk import compat
 from nltk import Tree
 from nltk.internals import find_jar, find_jar_iter, config_java, java, _java_options
@@ -24,16 +25,6 @@ from nltk.internals import find_jar, find_jar_iter, config_java, java, _java_opt
 from nltk.parse.api import ParserI
 
 _stanford_url = 'http://nlp.stanford.edu/software/lex-parser.shtml'
-
-#***********************************************************************
-# Split a text on certain punctuation
-def punct_split(s):
-  """"""
-  
-  s = s.strip()
-  s = re.sub('([.:;]|--+)', '\g<1>\n', s)
-  s = s.split('\n')
-  return s
 
 #***********************************************************************
 # Dependency-augmented syntactic tree class
@@ -53,7 +44,7 @@ class DependencyTree(Tree):
     self._preterm = False
     self._label = None
     super(DependencyTree, self).__init__(node, children)
-    if len(self) == 1 and isinstance(self[0], nltk.compat.string_types):
+    if len(self) == 1 and isinstance(self[0], compat.string_types):
       self._preterm = True
     self.set_label()
 
@@ -323,7 +314,7 @@ class DependencyTreeParser(ParserI):
     return iter(res)
   
   #=====================================================================
-  # Use StanfordParser to parse multiple preprocessed sentences
+  # Use StanfordParser to parse a list of tokens
   def parse_sents(self, sentences, verbose=False):
     """"""
     
@@ -339,14 +330,14 @@ class DependencyTreeParser(ParserI):
       cmd, '\n'.join(' '.join(sentence) for sentence in sentences), verbose))
 
   #=====================================================================
-  # Use StanfordParser to parse a raw sentence.
+  # Use StanfordParser to parse a raw sentence
   def raw_parse(self, sentence, verbose=False):
     """"""
     
     return next(self.raw_parse_sents([sentence], verbose))
 
   #=====================================================================
-  # Use StanfordParser to parse raw sentences.
+  # Use StanfordParser to parse raw sentences
   def raw_parse_sents(self, sentences, verbose=False):
     """"""
     
@@ -359,14 +350,14 @@ class DependencyTreeParser(ParserI):
     return self._parse_trees_output(self._execute(cmd, '\n'.join(sentences), verbose))
   
   #=====================================================================
-  # Use StanfordParser to parse raw sentences.
+  # Use StanfordParser to parse a tagged sentence
   def tagged_parse(self, sentence, verbose=False):
     """"""
     
     return next(self.tagged_parse_sents([sentence], verbose))
   
   #=====================================================================
-  # Use StanfordParser to parse raw sentences.
+  # Use StanfordParser to parse tagged sentences
   def tagged_parse_sents(self, sentences, verbose=False):
     """"""
     
