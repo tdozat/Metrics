@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #8/31/15: 1200-1600
 #9/06/15: 1330-1945
-#9/08/15: 11:30-12:15, 12:30-????
+#9/08/15: 1130-1430
 
 import os
 from collections import defaultdict
@@ -659,7 +659,9 @@ class MetricalTreeParser:
       preterms1b = trees1[-1].preterminals()
       preterms2a = trees2[0].preterminals()
       preterms2b = trees2[-1].preterminals()
-      sent = ' '.join([preterm[0] for preterm in trees1[0].preterminals()])
+      words = list([preterm[0] for preterm in trees1[0].preterminals()])
+      sent = ' '.join(words)
+      contour = []
       for preterm1a, preterm1b, preterm2a, preterm2b in zip(preterms1a, preterms1b, preterms2a, preterms2b):
         j += 1
         data['widx'].append(j)
@@ -685,10 +687,14 @@ class MetricalTreeParser:
         data['sent'].append(sent)
         data['log2(nparse1)'].append(np.log2(len(trees1)))
         data['log2(nparse2)'].append(np.log2(len(trees2)))
+        contour.append(str(data['mmean'][-1]))
+      contour = ' '.join(contour)
+      data['contour'].extend([contour]*len(words))
     return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'])
+                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
+                                       'contour'])
   
   #=====================================================================
   # Parse a list of tagged tokens into phrasal Metrical Trees
@@ -813,7 +819,7 @@ if __name__ == '__main__':
     for line in f:
       sents.extend(pause_splitter(line))
   df = parser.stats_raw_parse_sents(sents, arto=True)
-  df.to_csv(open('Hobbit.csv', 'w'), index_label=False)
+  df.to_csv(open('Hobbit.csv', 'w'), index=False)
   #forests = parser.phr_raw_parse_sents(sents)
   #for forest in forests:
   #  for stress1, stress2 in zip(forest[0].stresses(arto=True), forest[-1].stresses(arto=True)):
@@ -825,7 +831,7 @@ if __name__ == '__main__':
     for line in f:
       sents.extend(pause_splitter(line))
   df = parser.stats_raw_parse_sents(sents, arto=True)
-  df.to_csv(open('Nixon.csv', 'w'), index_label=False)
+  df.to_csv(open('Nixon.csv', 'w'), index=False)
   #forests = parser.phr_raw_parse_sents(sents)
   #for forest in forests:
   #  for stress1, stress2 in zip(forest[0].stresses(arto=True), forest[-1].stresses(arto=True)):
