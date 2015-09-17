@@ -49,7 +49,7 @@ class DependencyTree(Tree):
     self.set_label()
 
   #=====================================================================
-  # Get the preterimal value of the node
+  # Get the preterminal value of the node
   def preterminal(self):
     """"""
     
@@ -143,6 +143,14 @@ class DependencyTree(Tree):
         preterminal.set_dep(deps.pop(0))
   
   #=====================================================================
+  # Create a list of tuples from the preterminals
+  def to_tuples(self):
+    """"""
+    
+    for preterminal in self.preterminals():
+      yield (preterminal[0], preterminal.category(), preterminal.dependency())
+    
+  #=====================================================================
   # Get the last preterminal
   def _get_last_preterm(self):
     """"""
@@ -212,10 +220,13 @@ class DependencyTree(Tree):
     dGraph = dGraph.split('\n')
     lastWord = ''
     for dep in dGraph:
-      dep, thisWord = re.match('([a-z_:]+)\(.*?, (.*?)\)', dep).groups()
-      if thisWord != lastWord:
-        deps.append(dep)
-        lastWord = thisWord
+      try:
+        dep, thisWord = re.match('(.+?)\(.*?, (.*?)\)', dep).groups()
+        if thisWord != lastWord:
+          deps.append(dep)
+          lastWord = thisWord
+      except:
+        print ''
     dTree.set_deps(deps)
     return dTree
     
@@ -400,8 +411,7 @@ class DependencyTreeParser(ParserI):
       cmd.append(input_file.name)
 
       # Run the tagger and get the output.
-      stdout, stderr = java(cmd, classpath=(self._stanford_jar, self._model_jar, self._ejml_jar),
-                            stdout=PIPE, stderr=PIPE)
+      stdout, stderr = java(cmd, classpath=(self._stanford_jar, self._model_jar, self._ejml_jar), stdout=PIPE, stderr=PIPE)
       stdout = stdout.decode(encoding)
 
     os.unlink(input_file.name)
@@ -435,21 +445,46 @@ if __name__ == '__main__':
   
   doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
   
+  import nltk.data
+  sent_splitter = nltk.data.load('tokenizers/punkt/english.pickle')
+  import codecs
+  import cPickle as pkl
+  import time
+  import sys
+  
   DATE = '2015-04-20'
   MODELS_VERSION = '3.5.2'
   EJML_VERSION = '0.23'
   
-  os.environ['STANFORD_PARSER'] = 'stanford-parser-full-%s/stanford-parser.jar' % DATE
-  os.environ['STANFORD_MODELS'] = 'stanford-parser-full-%s/stanford-parser-%s-models.jar' % (DATE, MODELS_VERSION)
-  os.environ['STANFORD_EJML'] = 'stanford-parser-full-%s/ejml-%s.jar' % (DATE, EJML_VERSION)
-  parser = DependencyTreeParser(model_path='stanford-parser-full-%s/edu/stanford/nlp/models/lexparser/englishRNN.ser.gz' % DATE)
-  sents = []
-  with open('Hobbit.txt') as f:
-    for line in f:
-      sents.append(line)
-  sentences = parser.raw_parse_sents(sents)
-  for tree in sentences:
-    for t in tree:
-      t.contract()
-      print t
+  os.environ['STANFORD_PARSER'] = 'Stanford Library/stanford-parser-full-%s/stanford-parser.jar' % DATE
+  os.environ['STANFORD_MODELS'] = 'Stanford Library/stanford-parser-full-%s/stanford-parser-%s-models.jar' % (DATE, MODELS_VERSION)
+  os.environ['STANFORD_EJML'] = 'Stanford Library/stanford-parser-full-%s/ejml-%s.jar' % (DATE, EJML_VERSION)
+  parser = DependencyTreeParser(model_path='Stanford Library/stanford-parser-full-%s/edu/stanford/nlp/models/lexparser/englishRNN.ser.gz' % DATE)
   
+  #=====================================================================
+  basename = 'Valaquenta'
+  tuples = []
+  i = 0
+  lps = 0
+  t_0 = time.time()
+  lines = sum(1 for line in codecs.open('Text Book/Tolkien/%s.txt'%basename, encoding='utf-8'))
+  try:
+    with codecs.open('Text Book/Tolkien/%s.txt'%basename, encoding='utf-8') as f:
+      for line in f:
+        i += 1
+        for sent in sent_splitter.tokenize(line.strip()):
+          trees = parser.raw_parse(sent)
+          for tree in trees:
+            tuples.append(list(tree.to_tuples()))
+        t_i = time.time()
+        lps = i/(t_i-t_0)
+        lpm = lps*60
+        lph = lpm*60
+        etc = (lines-i)/lph
+        etc_h = int(etc)
+        etc_m = (etc-etc_h)*60
+        print 'Line %d/%d: %.1f lpm, %dh %.1fm left         \r' % (i, lines, lpm, etc_h, etc_m),
+        sys.stdout.flush()
+  except:
+    print 'Stopped while parsing line %d' % i
+  pkl.dump(tuples, open('Pickle Jar/%s.pkl'%basename, 'w'), protocol=pkl.HIGHEST_PROTOCOL)
