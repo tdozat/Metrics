@@ -1,0 +1,631 @@
+widx,word,nseg,nsyll,nstress,pos,dep,m1a,m1b,m2a,m2b,mmean,sidx,sent,ambig1,ambig2
+1,Mr.,5.0,2.0,1.0,NNP,compound,3.0,3.0,3.0,3.0,-2.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+2,Chief,3.0,1.0,1.0,NNP,compound,2.0,2.0,2.0,2.0,-1.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+3,Justice,6.0,2.0,1.0,NNP,root,3.0,3.0,3.0,3.0,-2.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+4,",",,,,",",,,,,,,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+5,Mr.,5.0,2.0,1.0,NNP,compound,3.0,3.0,3.0,3.0,-2.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+6,Vice,3.0,1.0,1.0,NNP,compound,2.0,2.0,2.0,2.0,-1.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+7,President,9.0,3.0,2.0,NNP,appos,3.0,3.0,3.0,3.0,-2.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+8,",",,,,",",,,,,,,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+9,my,2.0,1.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+10,friends,6.0,1.0,1.0,NNS,appos,1.0,1.0,1.0,1.0,0.0,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+11,:,,,,:,,,,,,,1,"Mr. Chief Justice , Mr. Vice President , my friends :",0,0
+1,You,2.0,1.0,1.0,PRP,nsubj,5.0,5.0,3.0,5.0,-3.5,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+2,will,3.0,1.0,1.0,MD,aux,4.0,4.0,3.0,4.0,-2.75,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+3,understand,9.0,3.0,2.0,VB,root,2.0,2.0,2.0,2.0,-1.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+4,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+5,",",,,,",",,,,,,,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+6,I,1.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+7,believe,5.0,2.0,1.0,VBP,dep,2.0,2.0,2.0,2.0,-1.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+8,",",,,,",",,,,,,,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+9,agree,4.0,2.0,1.0,VBP,dep,2.0,2.0,2.0,2.0,-1.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+10,with,3.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+11,my,2.0,1.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+12,wish,3.0,1.0,1.0,NN,nmod:with,2.0,2.0,2.0,2.0,-1.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+13,that,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+14,the,2.0,1.0,0.0,DT,det,6.0,6.0,6.0,6.0,-5.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+15,form,4.0,1.0,1.0,NN,nsubj,4.0,4.0,4.0,4.0,-3.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+16,of,2.0,1.0,1.0,IN,case,5.0,5.0,4.0,5.0,-3.75,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+17,this,3.0,1.0,1.0,DT,det,5.0,5.0,4.0,5.0,-3.75,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+18,inauguration,10.0,5.0,2.0,NN,nmod:of,3.0,3.0,3.0,3.0,-2.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+19,be,2.0,1.0,1.0,VB,cop,4.0,4.0,3.0,4.0,-2.75,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+20,simple,6.0,2.0,1.0,JJ,ccomp,2.0,2.0,2.0,2.0,-1.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+21,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+22,its,3.0,1.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+23,words,4.0,1.0,1.0,NNS,dep,2.0,2.0,2.0,2.0,-1.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+24,brief,4.0,1.0,1.0,JJ,ccomp,1.0,1.0,1.0,1.0,0.0,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+25,.,,,,.,,,,,,,2,"You will understand and , I believe , agree with my wish that the form of this inauguration be simple and its words brief .",8,8
+1,We,2.0,1.0,1.0,PRP,dep,6.0,6.0,5.0,6.0,-4.75,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+2,Americans,9.0,4.0,1.0,NNS,nsubj,4.0,4.0,4.0,4.0,-3.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+3,of,2.0,1.0,1.0,IN,case,5.0,5.0,4.0,5.0,-3.75,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+4,today,4.0,2.0,1.0,NN,nmod:of,3.0,3.0,3.0,3.0,-2.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+5,",",,,,",",,,,,,,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+6,together,6.0,3.0,1.0,RB,case,3.0,3.0,3.0,3.0,-2.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+7,with,3.0,1.0,1.0,IN,mwe,4.0,4.0,3.0,4.0,-2.75,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+8,our,2.0,2.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+9,allies,4.0,2.0,1.0,NNS,acl:relcl,2.0,2.0,2.0,2.0,-1.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+10,",",,,,",",,,,,,,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+11,are,2.0,1.0,1.0,VBP,aux,3.0,3.0,2.0,3.0,-1.75,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+12,passing,5.0,2.0,1.0,VBG,root,2.0,2.0,2.0,2.0,-1.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+13,through,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+14,a,1.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+15,period,6.0,3.0,1.0,NN,nmod:through,2.0,2.0,2.0,2.0,-1.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+16,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+17,supreme,6.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+18,test,4.0,1.0,1.0,NN,nmod:of,1.0,1.0,1.0,1.0,0.0,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+19,.,,,,.,,,,,,,3,"We Americans of today , together with our allies , are passing through a period of supreme test .",6,6
+1,It,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,4.0,4.0,-3.0,4,It is a test of our courage --,2,2
+2,is,2.0,1.0,1.0,VBZ,cop,3.0,3.0,2.0,3.0,-1.75,4,It is a test of our courage --,2,2
+3,a,1.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,4,It is a test of our courage --,2,2
+4,test,4.0,1.0,1.0,NN,root,2.0,2.0,2.0,2.0,-1.0,4,It is a test of our courage --,2,2
+5,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,4,It is a test of our courage --,2,2
+6,our,2.0,2.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,4,It is a test of our courage --,2,2
+7,courage,4.0,2.0,1.0,NN,nmod:of,1.0,1.0,1.0,1.0,0.0,4,It is a test of our courage --,2,2
+8,--,,,,:,,,,,,,4,It is a test of our courage --,2,2
+1,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,5,of our resolve --,1,1
+2,our,2.0,2.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,5,of our resolve --,1,1
+3,resolve,6.0,2.0,1.0,NN,root,1.0,1.0,1.0,1.0,0.0,5,of our resolve --,1,1
+4,--,,,,:,,,,,,,5,of our resolve --,1,1
+1,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,6,of our wisdom --,1,1
+2,our,2.0,2.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,6,of our wisdom --,1,1
+3,wisdom,6.0,2.0,1.0,NN,root,1.0,1.0,1.0,1.0,0.0,6,of our wisdom --,1,1
+4,--,,,,:,,,,,,,6,of our wisdom --,1,1
+1,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,7,of our essential democracy .,1,1
+2,our,2.0,2.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,7,of our essential democracy .,1,1
+3,essential,7.0,3.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,7,of our essential democracy .,1,1
+4,democracy,9.0,4.0,1.0,NN,root,1.0,1.0,1.0,1.0,0.0,7,of our essential democracy .,1,1
+5,.,,,,.,,,,,,,7,of our essential democracy .,1,1
+1,If,2.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,8,If we meet that test --,3,3
+2,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,8,If we meet that test --,3,3
+3,meet,3.0,1.0,1.0,VBP,root,2.0,2.0,2.0,2.0,-1.0,8,If we meet that test --,3,3
+4,that,3.0,1.0,1.0,DT,det,3.0,3.0,2.0,3.0,-1.75,8,If we meet that test --,3,3
+5,test,4.0,1.0,1.0,NN,dobj,1.0,1.0,1.0,1.0,0.0,8,If we meet that test --,3,3
+6,--,,,,:,,,,,,,8,If we meet that test --,3,3
+1,successfully,10.0,4.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,9,successfully and honorably --,0,0
+2,and,3.0,1.0,1.0,CC,root,3.0,3.0,3.0,3.0,-2.0,9,successfully and honorably --,0,0
+3,honorably,7.0,4.0,1.0,RB,advmod,1.0,1.0,1.0,1.0,0.0,9,successfully and honorably --,0,0
+4,--,,,,:,,,,,,,9,successfully and honorably --,0,0
+1,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+2,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+3,perform,6.0,2.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+4,a,1.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+5,service,5.0,2.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+6,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+7,historic,8.0,3.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+8,importance,9.0,3.0,1.0,NN,nmod:of,2.0,2.0,2.0,2.0,-1.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+9,which,3.0,1.0,1.0,WDT,ref,4.0,4.0,2.0,4.0,-2.5,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+10,men,3.0,1.0,1.0,NNS,nsubj,3.0,3.0,3.0,3.0,-2.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+11,and,3.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+12,women,5.0,2.0,1.0,NNS,conj:and,3.0,3.0,3.0,3.0,-2.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+13,and,3.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+14,children,7.0,2.0,1.0,NNS,conj:and,2.0,2.0,2.0,2.0,-1.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+15,will,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+16,honor,3.0,2.0,1.0,VB,acl:relcl,2.0,2.0,2.0,2.0,-1.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+17,throughout,5.0,2.0,1.0,IN,case,3.0,3.0,3.0,3.0,-2.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+18,all,2.0,1.0,1.0,DT,det,3.0,3.0,3.0,3.0,-2.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+19,time,3.0,1.0,1.0,NN,nmod:throughout,1.0,1.0,1.0,1.0,0.0,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+20,.,,,,.,,,,,,,10,we shall perform a service of historic importance which men and women and children will honor throughout all time .,6,5
+1,As,2.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+2,I,1.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+3,stand,5.0,1.0,1.0,VBP,root,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+4,here,3.0,1.0,1.0,RB,dobj,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+5,today,4.0,2.0,1.0,NN,nmod:tmod,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+6,",",,,,",",,,,,,,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+7,having,5.0,2.0,1.0,VBG,aux,3.0,3.0,3.0,3.0,-2.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+8,taken,5.0,2.0,1.0,VBN,advcl,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+9,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+10,solemn,5.0,2.0,1.0,NN,compound,3.0,3.0,3.0,3.0,-2.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+11,oath,2.0,1.0,1.0,NN,dobj,4.0,4.0,4.0,4.0,-3.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+12,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+13,office,4.0,2.0,1.0,NN,nmod:of,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+14,in,2.0,1.0,0.0,IN,case,3.0,3.0,2.0,3.0,-1.75,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+15,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+16,presence,7.0,2.0,1.0,NN,nmod:in,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+17,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+18,my,2.0,1.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+19,fellow,4.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+20,countrymen,9.0,3.0,1.0,NNS,nmod:of,1.0,1.0,1.0,1.0,0.0,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+21,--,,,,:,,,,,,,11,"As I stand here today , having taken the solemn oath of office in the presence of my fellow countrymen --",6,5
+1,in,2.0,1.0,0.0,IN,case,3.0,3.0,2.0,3.0,-1.75,12,in the presence of our God --,2,2
+2,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,12,in the presence of our God --,2,2
+3,presence,7.0,2.0,1.0,NN,root,2.0,2.0,2.0,2.0,-1.0,12,in the presence of our God --,2,2
+4,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,12,in the presence of our God --,2,2
+5,our,2.0,2.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,12,in the presence of our God --,2,2
+6,God,3.0,1.0,1.0,NN,nmod:of,1.0,1.0,1.0,1.0,0.0,12,in the presence of our God --,2,2
+7,--,,,,:,,,,,,,12,in the presence of our God --,2,2
+1,I,1.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,13,I know that it is America 's purpose that we shall not fail .,7,7
+2,know,2.0,1.0,1.0,VBP,root,2.0,2.0,2.0,2.0,-1.0,13,I know that it is America 's purpose that we shall not fail .,7,7
+3,that,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,13,I know that it is America 's purpose that we shall not fail .,7,7
+4,it,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,4.0,4.0,-3.0,13,I know that it is America 's purpose that we shall not fail .,7,7
+5,is,2.0,1.0,1.0,VBZ,cop,3.0,3.0,2.0,3.0,-1.75,13,I know that it is America 's purpose that we shall not fail .,7,7
+6,America,7.0,4.0,1.0,NNP,nmod:poss,3.0,3.0,3.0,3.0,-2.0,13,I know that it is America 's purpose that we shall not fail .,7,7
+7,'s,2.0,1.0,1.0,POS,case,,,,,,13,I know that it is America 's purpose that we shall not fail .,7,7
+8,purpose,5.0,2.0,1.0,NN,ccomp,2.0,2.0,2.0,2.0,-1.0,13,I know that it is America 's purpose that we shall not fail .,7,7
+9,that,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,13,I know that it is America 's purpose that we shall not fail .,7,7
+10,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,13,I know that it is America 's purpose that we shall not fail .,7,7
+11,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,13,I know that it is America 's purpose that we shall not fail .,7,7
+12,not,3.0,1.0,1.0,RB,neg,3.0,3.0,2.0,3.0,-1.75,13,I know that it is America 's purpose that we shall not fail .,7,7
+13,fail,3.0,1.0,1.0,VB,ccomp,1.0,1.0,1.0,1.0,0.0,13,I know that it is America 's purpose that we shall not fail .,7,7
+14,.,,,,.,,,,,,,13,I know that it is America 's purpose that we shall not fail .,7,7
+1,In,2.0,1.0,0.0,IN,case,4.0,4.0,3.0,4.0,-2.75,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+2,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+3,days,3.0,1.0,1.0,NNS,nmod:in,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+4,and,3.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+5,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+6,years,4.0,1.0,1.0,NNS,conj:and,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+7,that,3.0,1.0,1.0,WDT,ref,5.0,5.0,3.0,5.0,-3.5,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+8,are,2.0,1.0,1.0,VBP,acl:relcl,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+9,to,2.0,1.0,1.0,TO,mark,4.0,4.0,4.0,4.0,-3.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+10,come,3.0,1.0,1.0,VB,xcomp,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+11,",",,,,",",,,,,,,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+12,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+13,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+14,work,3.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+15,for,3.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+16,a,1.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+17,just,4.0,1.0,1.0,JJ,amod,4.0,4.0,4.0,4.0,-3.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+18,and,3.0,1.0,1.0,CC,cc,5.0,5.0,5.0,5.0,-4.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+19,honorable,7.0,4.0,1.0,JJ,conj:and,4.0,4.0,4.0,4.0,-3.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+20,peace,3.0,1.0,1.0,NN,nmod:for,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+21,",",,,,",",,,,,,,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+22,a,1.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+23,durable,7.0,3.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+24,peace,3.0,1.0,1.0,NN,appos,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+25,",",,,,",",,,,,,,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+26,as,2.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+27,today,4.0,2.0,1.0,NN,nmod:tmod,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+28,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+29,work,3.0,1.0,1.0,VBP,advcl,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+30,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+31,fight,3.0,1.0,1.0,VBP,advcl,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+32,for,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+33,total,5.0,2.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+34,victory,6.0,3.0,1.0,NN,nmod:for,2.0,2.0,2.0,2.0,-1.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+35,in,2.0,1.0,0.0,IN,case,3.0,3.0,2.0,3.0,-1.75,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+36,war,3.0,1.0,1.0,NN,nmod:in,1.0,1.0,1.0,1.0,0.0,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+37,.,,,,.,,,,,,,14,"In the days and the years that are to come , we shall work for a just and honorable peace , a durable peace , as today we work and fight for total victory in war .",9,9
+1,We,2.0,1.0,1.0,PRP,nsubj,5.0,5.0,3.0,5.0,-3.5,15,We can and we will achieve such a peace .,5,5
+2,can,3.0,1.0,1.0,MD,root,5.0,5.0,2.0,5.0,-3.25,15,We can and we will achieve such a peace .,5,5
+3,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,15,We can and we will achieve such a peace .,5,5
+4,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,15,We can and we will achieve such a peace .,5,5
+5,will,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,15,We can and we will achieve such a peace .,5,5
+6,achieve,4.0,2.0,1.0,VB,conj:and,2.0,2.0,2.0,2.0,-1.0,15,We can and we will achieve such a peace .,5,5
+7,such,3.0,1.0,1.0,PDT,det:predet,3.0,3.0,2.0,3.0,-1.75,15,We can and we will achieve such a peace .,5,5
+8,a,1.0,1.0,0.0,DT,det,3.0,3.0,3.0,3.0,-2.0,15,We can and we will achieve such a peace .,5,5
+9,peace,3.0,1.0,1.0,NN,dobj,1.0,1.0,1.0,1.0,0.0,15,We can and we will achieve such a peace .,5,5
+10,.,,,,.,,,,,,,15,We can and we will achieve such a peace .,5,5
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,16,We shall strive for perfection .,3,3
+2,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,16,We shall strive for perfection .,3,3
+3,strive,5.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,16,We shall strive for perfection .,3,3
+4,for,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,16,We shall strive for perfection .,3,3
+5,perfection,8.0,3.0,1.0,NN,nmod:for,1.0,1.0,1.0,1.0,0.0,16,We shall strive for perfection .,3,3
+6,.,,,,.,,,,,,,16,We shall strive for perfection .,3,3
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,17,We shall not achieve it immediately-but we still shall strive .,5,5
+2,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,17,We shall not achieve it immediately-but we still shall strive .,5,5
+3,not,3.0,1.0,1.0,RB,neg,3.0,3.0,2.0,3.0,-1.75,17,We shall not achieve it immediately-but we still shall strive .,5,5
+4,achieve,4.0,2.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,17,We shall not achieve it immediately-but we still shall strive .,5,5
+5,it,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,4.0,4.0,-3.0,17,We shall not achieve it immediately-but we still shall strive .,5,5
+6,immediately-but,,,,VB,ccomp,2.0,2.0,2.0,2.0,-1.0,17,We shall not achieve it immediately-but we still shall strive .,5,5
+7,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,17,We shall not achieve it immediately-but we still shall strive .,5,5
+8,still,4.0,1.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,17,We shall not achieve it immediately-but we still shall strive .,5,5
+9,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,17,We shall not achieve it immediately-but we still shall strive .,5,5
+10,strive,5.0,1.0,1.0,VB,ccomp,1.0,1.0,1.0,1.0,0.0,17,We shall not achieve it immediately-but we still shall strive .,5,5
+11,.,,,,.,,,,,,,17,We shall not achieve it immediately-but we still shall strive .,5,5
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,18,We may make mistakes --,2,2
+2,may,2.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,18,We may make mistakes --,2,2
+3,make,3.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,18,We may make mistakes --,2,2
+4,mistakes,7.0,2.0,1.0,NNS,dobj,1.0,1.0,1.0,1.0,0.0,18,We may make mistakes --,2,2
+5,--,,,,:,,,,,,,18,We may make mistakes --,2,2
+1,but,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+2,they,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+3,must,4.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+4,never,4.0,2.0,1.0,RB,neg,4.0,4.0,4.0,4.0,-3.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+5,be,2.0,1.0,1.0,VB,cop,3.0,3.0,2.0,3.0,-1.75,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+6,mistakes,7.0,2.0,1.0,NNS,root,2.0,2.0,2.0,2.0,-1.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+7,which,3.0,1.0,1.0,WDT,ref,4.0,4.0,2.0,4.0,-2.5,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+8,result,6.0,2.0,1.0,VBP,acl:relcl,2.0,2.0,2.0,2.0,-1.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+9,from,4.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+10,faintness,7.0,2.0,1.0,NNS,nmod:from,2.0,2.0,2.0,2.0,-1.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+11,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+12,`,,,,``,,2.0,2.0,2.0,2.0,-1.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+13,heart,4.0,1.0,1.0,NN,nmod:of,3.0,3.0,3.0,3.0,-2.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+14,or,2.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+15,abandonment,11.0,4.0,1.0,NN,nmod:of,2.0,2.0,2.0,2.0,-1.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+16,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+17,moral,5.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+18,principle,9.0,3.0,1.0,NN,nmod:of,1.0,1.0,1.0,1.0,0.0,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+19,.,,,,.,,,,,,,19,but they must never be mistakes which result from faintness of ` heart or abandonment of moral principle .,8,7
+1,I,1.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+2,remember,7.0,3.0,1.0,VBP,root,2.0,2.0,2.0,2.0,-1.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+3,that,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+4,my,2.0,1.0,1.0,PRP$,nmod:poss,6.0,6.0,6.0,6.0,-5.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+5,old,3.0,1.0,1.0,JJ,amod,5.0,5.0,5.0,5.0,-4.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+6,schoolmaster,9.0,3.0,2.0,NN,nsubj,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+7,",",,,,",",,,,,,,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+8,Dr.,4.0,1.0,1.0,NNP,compound,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+9,Peabody,6.0,3.0,2.0,NNP,appos,5.0,5.0,5.0,5.0,-4.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+10,",",,,,",",,,,,,,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+11,said-in,,,,JJ,amod,5.0,5.0,5.0,5.0,-4.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+12,days,3.0,1.0,1.0,NNS,appos,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+13,that,3.0,1.0,1.0,WDT,ref,6.0,6.0,4.0,6.0,-4.5,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+14,seemed,4.0,1.0,1.0,VBD,acl:relcl,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+15,to,2.0,1.0,1.0,TO,case,6.0,6.0,6.0,6.0,-5.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+16,us,2.0,1.0,1.0,PRP,nmod:to,7.0,7.0,4.0,7.0,-5.25,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+17,then,3.0,1.0,1.0,RB,advmod,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+18,to,2.0,1.0,1.0,TO,mark,5.0,5.0,5.0,5.0,-4.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+19,be,2.0,1.0,1.0,VB,cop,5.0,5.0,4.0,5.0,-3.75,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+20,secure,6.0,2.0,1.0,JJ,xcomp,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+21,and,3.0,1.0,1.0,CC,cc,5.0,5.0,5.0,5.0,-4.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+22,untroubled,9.0,3.0,1.0,JJ,xcomp,3.0,3.0,3.0,3.0,-2.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+23,",",,,,",",,,,,,,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+24,``,,,,``,,4.0,4.0,4.0,4.0,-3.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+25,Things,4.0,1.0,1.0,NNS,appos,3.0,3.0,3.0,3.0,-2.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+26,in,2.0,1.0,0.0,IN,case,4.0,4.0,3.0,4.0,-2.75,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+27,life,3.0,1.0,1.0,NN,nmod:in,2.0,2.0,2.0,2.0,-1.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+28,will,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+29,not,3.0,1.0,1.0,RB,neg,3.0,3.0,2.0,3.0,-1.75,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+30,always,5.0,2.0,2.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+31,run,3.0,1.0,1.0,VB,ccomp,2.0,2.0,2.0,2.0,-1.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+32,smoothly,6.0,2.0,1.0,RB,advmod,1.0,1.0,1.0,1.0,0.0,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+33,.,,,,.,,,,,,,20,"I remember that my old schoolmaster , Dr. Peabody , said-in days that seemed to us then to be secure and untroubled , `` Things in life will not always run smoothly .",8,8
+1,Sometimes,7.0,2.0,1.0,VBG,root,2.0,2.0,2.0,2.0,-1.0,21,Sometimes we will be rising toward the heights --,4,3
+2,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,21,Sometimes we will be rising toward the heights --,4,3
+3,will,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,21,Sometimes we will be rising toward the heights --,4,3
+4,be,2.0,1.0,1.0,VB,aux,3.0,3.0,2.0,3.0,-1.75,21,Sometimes we will be rising toward the heights --,4,3
+5,rising,5.0,2.0,1.0,VBG,ccomp,2.0,2.0,2.0,2.0,-1.0,21,Sometimes we will be rising toward the heights --,4,3
+6,toward,6.0,2.0,1.0,IN,case,3.0,3.0,3.0,3.0,-2.0,21,Sometimes we will be rising toward the heights --,4,3
+7,the,2.0,1.0,0.0,DT,det,3.0,3.0,3.0,3.0,-2.0,21,Sometimes we will be rising toward the heights --,4,3
+8,heights,4.0,1.0,1.0,NNS,nmod:toward,1.0,1.0,1.0,1.0,0.0,21,Sometimes we will be rising toward the heights --,4,3
+9,--,,,,:,,,,,,,21,Sometimes we will be rising toward the heights --,4,3
+1,then,3.0,1.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,22,then all will seem to reverse itself and start downward .,2,1
+2,all,2.0,1.0,1.0,DT,nsubj,4.0,4.0,4.0,4.0,-3.0,22,then all will seem to reverse itself and start downward .,2,1
+3,will,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,22,then all will seem to reverse itself and start downward .,2,1
+4,seem,3.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,22,then all will seem to reverse itself and start downward .,2,1
+5,to,2.0,1.0,1.0,TO,mark,3.0,3.0,3.0,3.0,-2.0,22,then all will seem to reverse itself and start downward .,2,1
+6,reverse,5.0,2.0,1.0,VB,xcomp,2.0,2.0,2.0,2.0,-1.0,22,then all will seem to reverse itself and start downward .,2,1
+7,itself,6.0,2.0,1.0,PRP,dobj,5.0,5.0,5.0,5.0,-4.0,22,then all will seem to reverse itself and start downward .,2,1
+8,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,22,then all will seem to reverse itself and start downward .,2,1
+9,start,5.0,1.0,1.0,VB,xcomp,2.0,2.0,2.0,2.0,-1.0,22,then all will seem to reverse itself and start downward .,2,1
+10,downward,6.0,2.0,1.0,RB,advmod,1.0,1.0,1.0,1.0,0.0,22,then all will seem to reverse itself and start downward .,2,1
+11,.,,,,.,,,,,,,22,then all will seem to reverse itself and start downward .,2,1
+1,The,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+2,great,4.0,1.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+3,fact,4.0,1.0,1.0,NN,nsubj,3.0,3.0,3.0,3.0,-2.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+4,to,2.0,1.0,1.0,TO,mark,4.0,4.0,4.0,4.0,-3.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+5,remember,7.0,3.0,1.0,VB,acl,2.0,2.0,2.0,2.0,-1.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+6,is,2.0,1.0,1.0,VBZ,root,2.0,2.0,2.0,2.0,-1.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+7,that,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+8,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+9,trend,5.0,1.0,1.0,NN,nsubj,3.0,3.0,3.0,3.0,-2.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+10,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+11,civilization,11.0,5.0,2.0,NN,nmod:of,2.0,2.0,2.0,2.0,-1.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+12,itself,6.0,2.0,1.0,PRP,advmod,5.0,5.0,5.0,5.0,-4.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+13,is,2.0,1.0,1.0,VBZ,cop,3.0,3.0,2.0,3.0,-1.75,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+14,forever,5.0,3.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+15,upward,5.0,2.0,1.0,JJ,ccomp,1.0,1.0,1.0,1.0,0.0,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+16,;,,,,:,,,,,,,23,The great fact to remember is that the trend of civilization itself is forever upward ;,4,3
+1,that,3.0,1.0,1.0,IN,mark,4.0,4.0,3.0,4.0,-2.75,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+2,a,1.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+3,line,3.0,1.0,1.0,NN,nsubj,3.0,3.0,3.0,3.0,-2.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+4,drawn,4.0,1.0,1.0,VBN,csubj,3.0,3.0,3.0,3.0,-2.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+5,through,3.0,1.0,1.0,IN,case,5.0,5.0,4.0,5.0,-3.75,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+6,the,2.0,1.0,0.0,DT,det,7.0,7.0,7.0,7.0,-6.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+7,middle,5.0,2.0,1.0,NN,nmod:through,5.0,5.0,5.0,5.0,-4.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+8,of,2.0,1.0,1.0,IN,case,6.0,6.0,5.0,6.0,-4.75,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+9,the,2.0,1.0,0.0,DT,det,6.0,6.0,6.0,6.0,-5.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+10,peaks,4.0,1.0,1.0,NNS,nmod:of,4.0,4.0,4.0,4.0,-3.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+11,and,3.0,1.0,1.0,CC,cc,5.0,5.0,5.0,5.0,-4.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+12,the,2.0,1.0,0.0,DT,det,6.0,6.0,6.0,6.0,-5.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+13,valleys,5.0,2.0,1.0,NNS,nmod:through,4.0,4.0,4.0,4.0,-3.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+14,of,2.0,1.0,1.0,IN,case,5.0,5.0,4.0,5.0,-3.75,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+15,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+16,centuries,7.0,3.0,1.0,NNS,nmod:of,3.0,3.0,3.0,3.0,-2.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+17,always,5.0,2.0,2.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+18,has,3.0,1.0,1.0,VBZ,root,3.0,3.0,3.0,3.0,-2.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+19,an,2.0,1.0,1.0,DT,det,4.0,4.0,4.0,4.0,-3.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+20,upward,5.0,2.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+21,trend,5.0,1.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+22,.,,,,.,,,,,,,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+23,'',,,,'',,1.0,1.0,1.0,1.0,0.0,24,that a line drawn through the middle of the peaks and the valleys of the centuries always has an upward trend . '',4,4
+1,Our,2.0,2.0,1.0,PRP$,nmod:poss,5.0,5.0,5.0,5.0,-4.0,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+2,Constitution,11.0,4.0,2.0,NN,nsubj,3.0,3.0,3.0,3.0,-2.0,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+3,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+4,1787,,,,CD,nmod:of,2.0,2.0,2.0,2.0,-1.0,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+5,was,3.0,1.0,1.0,VBD,cop,3.0,3.0,2.0,3.0,-1.75,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+6,not,3.0,1.0,1.0,RB,neg,3.0,3.0,2.0,3.0,-1.75,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+7,a,1.0,1.0,0.0,DT,det,3.0,3.0,3.0,3.0,-2.0,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+8,perfect,6.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+9,instrument,10.0,3.0,1.0,NN,root,1.0,1.0,1.0,1.0,0.0,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+10,;,,,,:,,,,,,,25,Our Constitution of 1787 was not a perfect instrument ;,3,3
+1,it,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,4.0,4.0,-3.0,26,it is not perfect yet .,2,2
+2,is,2.0,1.0,1.0,VBZ,cop,3.0,3.0,2.0,3.0,-1.75,26,it is not perfect yet .,2,2
+3,not,3.0,1.0,1.0,RB,neg,3.0,3.0,2.0,3.0,-1.75,26,it is not perfect yet .,2,2
+4,perfect,6.0,2.0,1.0,JJ,root,2.0,2.0,2.0,2.0,-1.0,26,it is not perfect yet .,2,2
+5,yet,3.0,1.0,1.0,RB,advmod,1.0,1.0,1.0,1.0,0.0,26,it is not perfect yet .,2,2
+6,.,,,,.,,,,,,,26,it is not perfect yet .,2,2
+1,But,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+2,it,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,4.0,4.0,-3.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+3,provided,8.0,3.0,1.0,VBD,root,2.0,2.0,2.0,2.0,-1.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+4,a,1.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+5,firm,3.0,1.0,1.0,NN,compound,2.0,2.0,2.0,2.0,-1.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+6,base,3.0,1.0,1.0,NN,dobj,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+7,upon,4.0,2.0,1.0,IN,mark,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+8,which,3.0,1.0,1.0,WDT,dobj,4.0,4.0,2.0,4.0,-2.5,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+9,all,2.0,1.0,1.0,DT,det,5.0,5.0,5.0,5.0,-4.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+10,manner,4.0,2.0,1.0,NN,nsubj,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+11,of,2.0,1.0,1.0,IN,case,5.0,5.0,4.0,5.0,-3.75,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+12,men,3.0,1.0,1.0,NNS,nmod:of,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+13,",",,,,",",,,,,,,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+14,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+15,all,2.0,1.0,1.0,DT,det,5.0,5.0,5.0,5.0,-4.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+16,races,5.0,2.0,1.0,NNS,nmod:of,4.0,4.0,4.0,4.0,-3.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+17,and,3.0,1.0,1.0,CC,cc,5.0,5.0,5.0,5.0,-4.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+18,colors,5.0,2.0,1.0,NNS,nmod:of,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+19,and,3.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+20,creeds,5.0,1.0,1.0,NNS,nmod:of,2.0,2.0,2.0,2.0,-1.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+21,",",,,,",",,,,,,,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+22,could,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+23,build,4.0,1.0,1.0,VB,advcl,2.0,2.0,2.0,2.0,-1.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+24,our,2.0,2.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+25,solid,5.0,2.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+26,structure,7.0,2.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+27,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+28,democracy,9.0,4.0,1.0,NN,nmod:of,1.0,1.0,1.0,1.0,0.0,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+29,.,,,,.,,,,,,,27,"But it provided a firm base upon which all manner of men , of all races and colors and creeds , could build our solid structure of democracy .",6,5
+1,Today,4.0,2.0,1.0,NN,nmod:tmod,2.0,2.0,2.0,2.0,-1.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+2,",",,,,",",,,,,,,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+3,in,2.0,1.0,0.0,IN,case,4.0,4.0,3.0,4.0,-2.75,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+4,this,3.0,1.0,1.0,DT,det,5.0,5.0,4.0,5.0,-3.75,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+5,year,3.0,1.0,1.0,NN,nmod:in,3.0,3.0,3.0,3.0,-2.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+6,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+7,war,3.0,1.0,1.0,NN,nmod:of,3.0,3.0,3.0,3.0,-2.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+8,",",,,,",",,,,,,,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+9,1945,,,,CD,amod,2.0,2.0,2.0,2.0,-1.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+10,",",,,,",",,,,,,,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+11,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+12,have,3.0,1.0,1.0,VBP,aux,3.0,3.0,2.0,3.0,-1.75,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+13,learned,4.0,1.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+14,lessons-at,,,,NN,iobj,2.0,2.0,2.0,2.0,-1.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+15,a,1.0,1.0,0.0,DT,det,3.0,3.0,3.0,3.0,-2.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+16,fearful,6.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+17,cost,4.0,1.0,1.0,NN,dobj,1.0,1.0,1.0,1.0,0.0,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+18,--,,,,:,,,,,,,28,"Today , in this year of war , 1945 , we have learned lessons-at a fearful cost --",5,5
+1,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,29,and we shall profit by them .,4,4
+2,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,29,and we shall profit by them .,4,4
+3,shall,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,29,and we shall profit by them .,4,4
+4,profit,6.0,2.0,1.0,VB,root,1.0,1.0,2.0,1.0,-0.25,29,and we shall profit by them .,4,4
+5,by,2.0,1.0,1.0,IN,case,4.0,4.0,2.0,4.0,-2.5,29,and we shall profit by them .,4,4
+6,them,3.0,1.0,1.0,PRP,nmod:by,5.0,5.0,1.0,5.0,-3.0,29,and we shall profit by them .,4,4
+7,.,,,,.,,,,,,,29,and we shall profit by them .,4,4
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,30,"We have learned that we can not live alone , at peace ;",7,7
+2,have,3.0,1.0,1.0,VBP,aux,3.0,3.0,2.0,3.0,-1.75,30,"We have learned that we can not live alone , at peace ;",7,7
+3,learned,4.0,1.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,30,"We have learned that we can not live alone , at peace ;",7,7
+4,that,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,30,"We have learned that we can not live alone , at peace ;",7,7
+5,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,30,"We have learned that we can not live alone , at peace ;",7,7
+6,can,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,30,"We have learned that we can not live alone , at peace ;",7,7
+7,not,3.0,1.0,1.0,RB,neg,3.0,3.0,2.0,3.0,-1.75,30,"We have learned that we can not live alone , at peace ;",7,7
+8,live,3.0,1.0,1.0,VB,ccomp,2.0,2.0,2.0,2.0,-1.0,30,"We have learned that we can not live alone , at peace ;",7,7
+9,alone,4.0,2.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,30,"We have learned that we can not live alone , at peace ;",7,7
+10,",",,,,",",,,,,,,30,"We have learned that we can not live alone , at peace ;",7,7
+11,at,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,30,"We have learned that we can not live alone , at peace ;",7,7
+12,peace,3.0,1.0,1.0,NN,nmod:at,1.0,1.0,1.0,1.0,0.0,30,"We have learned that we can not live alone , at peace ;",7,7
+13,;,,,,:,,,,,,,30,"We have learned that we can not live alone , at peace ;",7,7
+1,that,3.0,1.0,1.0,IN,mark,4.0,4.0,3.0,4.0,-2.75,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+2,our,2.0,2.0,1.0,PRP$,nmod:poss,5.0,5.0,5.0,5.0,-4.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+3,own,2.0,1.0,1.0,JJ,amod,4.0,4.0,4.0,4.0,-3.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+4,well-being,,,,NN,nsubj,3.0,3.0,3.0,3.0,-2.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+5,is,2.0,1.0,1.0,VBZ,cop,4.0,4.0,3.0,4.0,-2.75,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+6,dependent,9.0,3.0,1.0,JJ,dep,3.0,3.0,3.0,3.0,-2.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+7,on,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+8,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+9,well-being,,,,NN,nmod:on,3.0,3.0,3.0,3.0,-2.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+10,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+11,other,3.0,2.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+12,Nations,6.0,2.0,1.0,NNPS,nmod:of,2.0,2.0,2.0,2.0,-1.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+13,",",,,,",",,,,,,,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+14,far,3.0,1.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+15,away,3.0,2.0,1.0,RB,root,1.0,1.0,1.0,1.0,0.0,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+16,.,,,,.,,,,,,,31,"that our own well-being is dependent on the well-being of other Nations , far away .",4,4
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+2,have,3.0,1.0,1.0,VBP,aux,3.0,3.0,2.0,3.0,-1.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+3,learned,4.0,1.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+4,that,3.0,1.0,1.0,IN,mark,4.0,4.0,3.0,4.0,-2.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+5,we,2.0,1.0,1.0,PRP,nsubj,5.0,5.0,3.0,5.0,-3.5,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+6,must,4.0,1.0,1.0,MD,aux,4.0,4.0,3.0,4.0,-2.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+7,live,3.0,1.0,1.0,VB,dep,3.0,3.0,3.0,3.0,-2.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+8,as,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+9,men,3.0,1.0,1.0,NNS,nmod:as,3.0,3.0,3.0,3.0,-2.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+10,and,3.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+11,not,3.0,1.0,1.0,RB,nmod:as,3.0,3.0,3.0,3.0,-2.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+12,as,2.0,1.0,1.0,IN,amod,4.0,4.0,3.0,4.0,-2.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+13,ostriches,8.0,3.0,1.0,NNS,dep,2.0,2.0,2.0,2.0,-1.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+14,",",,,,",",,,,,,,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+15,nor,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+16,as,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+17,dogs,4.0,1.0,1.0,NNS,dep,2.0,2.0,2.0,2.0,-1.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+18,in,2.0,1.0,0.0,IN,case,3.0,3.0,2.0,3.0,-1.75,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+19,the,2.0,1.0,0.0,DT,det,3.0,3.0,3.0,3.0,-2.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+20,manger,5.0,2.0,1.0,NN,nmod:in,1.0,1.0,1.0,1.0,0.0,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+21,.,,,,.,,,,,,,32,"We have learned that we must live as men and not as ostriches , nor as dogs in the manger .",9,9
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,33,"We have learned to be citizens of the world , members of the human community .",5,5
+2,have,3.0,1.0,1.0,VBP,aux,3.0,3.0,2.0,3.0,-1.75,33,"We have learned to be citizens of the world , members of the human community .",5,5
+3,learned,4.0,1.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+4,to,2.0,1.0,1.0,TO,mark,3.0,3.0,3.0,3.0,-2.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+5,be,2.0,1.0,1.0,VB,cop,3.0,3.0,2.0,3.0,-1.75,33,"We have learned to be citizens of the world , members of the human community .",5,5
+6,citizens,8.0,3.0,1.0,NNS,xcomp,2.0,2.0,2.0,2.0,-1.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+7,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,33,"We have learned to be citizens of the world , members of the human community .",5,5
+8,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+9,world,4.0,1.0,1.0,NN,nmod:of,2.0,2.0,2.0,2.0,-1.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+10,",",,,,",",,,,,,,33,"We have learned to be citizens of the world , members of the human community .",5,5
+11,members,6.0,2.0,1.0,NNS,appos,2.0,2.0,2.0,2.0,-1.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+12,of,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,33,"We have learned to be citizens of the world , members of the human community .",5,5
+13,the,2.0,1.0,0.0,DT,det,3.0,3.0,3.0,3.0,-2.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+14,human,6.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+15,community,9.0,4.0,1.0,NN,nmod:of,1.0,1.0,1.0,1.0,0.0,33,"We have learned to be citizens of the world , members of the human community .",5,5
+16,.,,,,.,,,,,,,33,"We have learned to be citizens of the world , members of the human community .",5,5
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+2,have,3.0,1.0,1.0,VBP,aux,4.0,4.0,3.0,4.0,-2.75,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+3,learned,4.0,1.0,1.0,VBN,root,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+4,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+5,simple,6.0,2.0,1.0,JJ,amod,4.0,4.0,4.0,4.0,-3.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+6,truth,4.0,1.0,1.0,NN,dobj,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+7,",",,,,",",,,,,,,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+8,as,2.0,1.0,1.0,IN,mark,4.0,4.0,3.0,4.0,-2.75,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+9,Emerson,6.0,3.0,1.0,NNP,nsubj,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+10,said,3.0,1.0,1.0,VBD,advcl,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+11,",",,,,",",,,,,,,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+12,that,3.0,1.0,1.0,IN,mark,4.0,4.0,3.0,4.0,-2.75,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+13,",",,,,",",,,,,,,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+14,``,,,,``,,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+15,The,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+16,only,4.0,2.0,1.0,JJ,amod,4.0,4.0,4.0,4.0,-3.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+17,way,2.0,1.0,1.0,NN,nsubj,4.0,4.0,4.0,4.0,-3.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+18,to,2.0,1.0,1.0,TO,mark,5.0,5.0,5.0,5.0,-4.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+19,have,3.0,1.0,1.0,VB,acl,4.0,4.0,4.0,4.0,-3.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+20,a,1.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+21,friend,5.0,1.0,1.0,NN,dobj,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+22,is,2.0,1.0,1.0,VBZ,ccomp,3.0,3.0,3.0,3.0,-2.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+23,to,2.0,1.0,1.0,TO,mark,4.0,4.0,4.0,4.0,-3.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+24,be,2.0,1.0,1.0,VB,cop,4.0,4.0,3.0,4.0,-2.75,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+25,one,3.0,1.0,1.0,CD,xcomp,2.0,2.0,2.0,2.0,-1.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+26,.,,,,.,,,,,,,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+27,'',,,,'',,1.0,1.0,1.0,1.0,0.0,34,"We have learned the simple truth , as Emerson said , that , `` The only way to have a friend is to be one . ''",5,5
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+2,can,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+3,gain,3.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+4,no,2.0,1.0,1.0,DT,neg,4.0,4.0,4.0,4.0,-3.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+5,lasting,6.0,2.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+6,peace,3.0,1.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+7,if,2.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+8,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+9,approach,5.0,2.0,1.0,VBP,advcl,2.0,2.0,2.0,2.0,-1.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+10,it,2.0,1.0,1.0,PRP,dobj,4.0,4.0,4.0,4.0,-3.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+11,with,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+12,suspicion,8.0,3.0,1.0,NN,nmod:with,2.0,2.0,2.0,2.0,-1.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+13,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+14,mistrust,8.0,2.0,1.0,NN,nmod:with,1.0,1.0,1.0,1.0,0.0,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+15,--,,,,:,,,,,,,35,We can gain no lasting peace if we approach it with suspicion and mistrust --,5,5
+1,or,2.0,1.0,1.0,CC,root,3.0,3.0,3.0,3.0,-2.0,36,or with fear .,1,1
+2,with,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,36,or with fear .,1,1
+3,fear,3.0,1.0,1.0,NN,nmod:with,1.0,1.0,1.0,1.0,0.0,36,or with fear .,1,1
+4,.,,,,.,,,,,,,36,or with fear .,1,1
+1,We,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+2,can,3.0,1.0,1.0,MD,aux,3.0,3.0,2.0,3.0,-1.75,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+3,gain,3.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+4,it,2.0,1.0,1.0,PRP,dobj,4.0,4.0,4.0,4.0,-3.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+5,only,4.0,2.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+6,if,2.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+7,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+8,proceed,6.0,2.0,1.0,VBP,advcl,2.0,2.0,2.0,2.0,-1.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+9,with,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+10,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+11,understanding,11.0,4.0,2.0,NN,nmod:with,3.0,3.0,3.0,3.0,-2.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+12,and,3.0,1.0,1.0,CC,cc,4.0,4.0,4.0,4.0,-3.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+13,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+14,confidence,9.0,3.0,1.0,NN,nmod:with,2.0,2.0,2.0,2.0,-1.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+15,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+16,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+17,courage,4.0,2.0,1.0,NN,nmod:with,2.0,2.0,2.0,2.0,-1.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+18,which,3.0,1.0,1.0,WDT,ref,4.0,4.0,2.0,4.0,-2.5,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+19,flow,3.0,1.0,1.0,VBP,acl:relcl,2.0,2.0,2.0,2.0,-1.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+20,from,4.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+21,conviction,9.0,3.0,1.0,NN,nmod:from,1.0,1.0,1.0,1.0,0.0,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+22,.,,,,.,,,,,,,37,We can gain it only if we proceed with the understanding and the confidence and the courage which flow from conviction .,7,7
+1,The,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,38,The Almighty God has blessed our land in many ways .,2,2
+2,Almighty,6.0,3.0,1.0,NNP,compound,2.0,2.0,2.0,2.0,-1.0,38,The Almighty God has blessed our land in many ways .,2,2
+3,God,3.0,1.0,1.0,NNP,nsubj,3.0,3.0,3.0,3.0,-2.0,38,The Almighty God has blessed our land in many ways .,2,2
+4,has,3.0,1.0,1.0,VBZ,aux,3.0,3.0,2.0,3.0,-1.75,38,The Almighty God has blessed our land in many ways .,2,2
+5,blessed,5.0,1.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,38,The Almighty God has blessed our land in many ways .,2,2
+6,our,2.0,2.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,38,The Almighty God has blessed our land in many ways .,2,2
+7,land,4.0,1.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,38,The Almighty God has blessed our land in many ways .,2,2
+8,in,2.0,1.0,0.0,IN,case,3.0,3.0,2.0,3.0,-1.75,38,The Almighty God has blessed our land in many ways .,2,2
+9,many,4.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,38,The Almighty God has blessed our land in many ways .,2,2
+10,ways,3.0,1.0,1.0,NNS,nmod:in,1.0,1.0,1.0,1.0,0.0,38,The Almighty God has blessed our land in many ways .,2,2
+11,.,,,,.,,,,,,,38,The Almighty God has blessed our land in many ways .,2,2
+1,He,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+2,has,3.0,1.0,1.0,VBZ,aux,3.0,3.0,2.0,3.0,-1.75,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+3,given,5.0,2.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+4,our,2.0,2.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+5,people,5.0,2.0,1.0,NNS,dep,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+6,stout,4.0,1.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+7,hearts,5.0,1.0,1.0,NNS,dobj,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+8,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+9,strong,5.0,1.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+10,arms,4.0,1.0,1.0,NNS,dobj,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+11,with,3.0,1.0,1.0,IN,mark,3.0,3.0,2.0,3.0,-1.75,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+12,which,3.0,1.0,1.0,WDT,nsubj,4.0,4.0,2.0,4.0,-2.5,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+13,to,2.0,1.0,1.0,TO,mark,3.0,3.0,3.0,3.0,-2.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+14,strike,5.0,1.0,1.0,VB,acl,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+15,mighty,4.0,2.0,1.0,JJ,amod,3.0,3.0,3.0,3.0,-2.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+16,blows,4.0,1.0,1.0,NNS,dobj,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+17,for,3.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+18,freedom,6.0,2.0,1.0,NN,nmod:for,2.0,2.0,2.0,2.0,-1.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+19,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+20,truth,4.0,1.0,1.0,NN,nmod:for,1.0,1.0,1.0,1.0,0.0,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+21,.,,,,.,,,,,,,39,He has given our people stout hearts and strong arms with which to strike mighty blows for freedom and truth .,5,5
+1,He,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+2,has,3.0,1.0,1.0,VBZ,aux,3.0,3.0,2.0,3.0,-1.75,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+3,given,5.0,2.0,1.0,VBN,root,2.0,2.0,2.0,2.0,-1.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+4,to,2.0,1.0,1.0,TO,case,4.0,4.0,4.0,4.0,-3.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+5,our,2.0,2.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+6,country,6.0,2.0,1.0,NN,nmod:to,2.0,2.0,2.0,2.0,-1.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+7,a,1.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+8,faith,3.0,1.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+9,which,3.0,1.0,1.0,WDT,ref,4.0,4.0,2.0,4.0,-2.5,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+10,has,3.0,1.0,1.0,VBZ,aux,3.0,3.0,2.0,3.0,-1.75,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+11,become,5.0,2.0,1.0,VBN,acl:relcl,2.0,2.0,2.0,2.0,-1.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+12,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+13,hope,3.0,1.0,1.0,NN,xcomp,3.0,3.0,3.0,3.0,-2.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+14,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+15,all,2.0,1.0,1.0,DT,det,4.0,4.0,4.0,4.0,-3.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+16,peoples,6.0,2.0,1.0,NNS,nmod:of,2.0,2.0,2.0,2.0,-1.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+17,in,2.0,1.0,0.0,IN,case,3.0,3.0,2.0,3.0,-1.75,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+18,an,2.0,1.0,1.0,DT,det,3.0,3.0,3.0,3.0,-2.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+19,anguished,7.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+20,world,4.0,1.0,1.0,NN,nmod:in,1.0,1.0,1.0,1.0,0.0,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+21,.,,,,.,,,,,,,40,He has given to our country a faith which has become the hope of all peoples in an anguished world .,6,6
+1,So,2.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+2,we,2.0,1.0,1.0,PRP,nsubj,4.0,4.0,2.0,4.0,-2.5,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+3,pray,3.0,1.0,1.0,VBP,root,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+4,to,2.0,1.0,1.0,TO,mark,3.0,3.0,3.0,3.0,-2.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+5,Him,3.0,1.0,1.0,VB,xcomp,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+6,now,2.0,1.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+7,for,3.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+8,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+9,vision,5.0,2.0,1.0,NN,nmod:for,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+10,to,2.0,1.0,1.0,TO,mark,3.0,3.0,3.0,3.0,-2.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+11,see,2.0,1.0,1.0,VB,xcomp,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+12,our,2.0,2.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+13,way,2.0,1.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+14,clearly,6.0,2.0,1.0,RB,advmod,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+15,to,2.0,1.0,1.0,TO,mark,3.0,3.0,3.0,3.0,-2.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+16,see,2.0,1.0,1.0,VB,advcl,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+17,the,2.0,1.0,0.0,DT,det,4.0,4.0,4.0,4.0,-3.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+18,way,2.0,1.0,1.0,NN,dobj,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+19,that,3.0,1.0,1.0,WDT,ref,4.0,4.0,2.0,4.0,-2.5,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+20,leads,4.0,1.0,1.0,VBZ,acl:relcl,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+21,to,2.0,1.0,1.0,TO,case,4.0,4.0,4.0,4.0,-3.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+22,a,1.0,1.0,0.0,DT,det,4.0,4.0,5.0,4.0,-3.25,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+23,better,4.0,2.0,1.0,JJR,amod,3.0,3.0,4.0,3.0,-2.25,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+24,life,3.0,1.0,1.0,NN,nmod:to,2.0,2.0,3.0,2.0,-1.25,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+25,for,3.0,1.0,1.0,IN,case,5.0,5.0,3.0,5.0,-3.5,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+26,ourselves,7.0,3.0,1.0,PRP,nmod:for,6.0,6.0,2.0,6.0,-4.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+27,and,3.0,1.0,1.0,CC,cc,3.0,3.0,3.0,3.0,-2.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+28,for,3.0,1.0,1.0,IN,case,4.0,4.0,2.0,4.0,-2.5,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+29,all,2.0,1.0,1.0,DT,nmod,5.0,5.0,5.0,5.0,-4.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+30,our,2.0,2.0,1.0,PRP$,nmod:poss,3.0,3.0,3.0,3.0,-2.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+31,fellow,4.0,2.0,1.0,JJ,amod,2.0,2.0,2.0,2.0,-1.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+32,men,3.0,1.0,1.0,NNS,nmod,1.0,1.0,1.0,1.0,0.0,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+33,--,,,,:,,,,,,,41,So we pray to Him now for the vision to see our way clearly to see the way that leads to a better life for ourselves and for all our fellow men --,6,5
+1,and,3.0,1.0,1.0,VB,root,2.0,2.0,2.0,2.0,-1.0,42,and to the achievement of His will to peace on earth .,2,2
+2,to,2.0,1.0,1.0,TO,case,4.0,4.0,4.0,4.0,-3.0,42,and to the achievement of His will to peace on earth .,2,2
+3,the,2.0,1.0,0.0,DT,det,5.0,5.0,5.0,5.0,-4.0,42,and to the achievement of His will to peace on earth .,2,2
+4,achievement,8.0,3.0,1.0,NN,nmod:to,3.0,3.0,3.0,3.0,-2.0,42,and to the achievement of His will to peace on earth .,2,2
+5,of,2.0,1.0,1.0,IN,case,4.0,4.0,3.0,4.0,-2.75,42,and to the achievement of His will to peace on earth .,2,2
+6,His,3.0,1.0,1.0,PRP$,nmod:poss,4.0,4.0,4.0,4.0,-3.0,42,and to the achievement of His will to peace on earth .,2,2
+7,will,3.0,1.0,1.0,NN,nmod:of,2.0,2.0,2.0,2.0,-1.0,42,and to the achievement of His will to peace on earth .,2,2
+8,to,2.0,1.0,1.0,TO,case,3.0,3.0,3.0,3.0,-2.0,42,and to the achievement of His will to peace on earth .,2,2
+9,peace,3.0,1.0,1.0,NN,nmod:to,2.0,2.0,2.0,2.0,-1.0,42,and to the achievement of His will to peace on earth .,2,2
+10,on,2.0,1.0,1.0,IN,case,3.0,3.0,2.0,3.0,-1.75,42,and to the achievement of His will to peace on earth .,2,2
+11,earth,2.0,1.0,1.0,NN,nmod:on,1.0,1.0,1.0,1.0,0.0,42,and to the achievement of His will to peace on earth .,2,2
+12,.,,,,.,,,,,,,42,and to the achievement of His will to peace on earth .,2,2
