@@ -3,6 +3,7 @@
 #8/31/15: 1200-1600
 #9/06/15: 1330-1945
 #9/08/15: 1130-1430
+#9/15 3:30-6:30 <- taken care of?
 
 import os
 from collections import defaultdict
@@ -925,7 +926,6 @@ class MetricalTreeParser:
 # Test the module
 if __name__ == '__main__':
   """"""
-  #9/15 3:30-6:30
   
   import glob
   import re

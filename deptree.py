@@ -273,7 +273,7 @@ class DependencyTreeParser(ParserI):
   
   #=====================================================================
   # Initialize
-  def __init__(self,  path_to_jar=None, path_to_models_jar=None, path_to_ejml_jar=None, model_path='edu/stanford/nlp/models/parser/lexparser/englishPCFG.ser.gz', encoding='utf8', verbose=False, java_options='-mx1024m'):
+  def __init__(self,  path_to_jar=None, path_to_models_jar=None, path_to_ejml_jar=None, model_path='edu/stanford/nlp/models/parser/lexparser/englishPCFG.ser.gz', encoding='utf8', verbose=False, java_options='-mx3G'):
     """"""
     
     self._stanford_jar = find_jar(
@@ -462,7 +462,7 @@ if __name__ == '__main__':
   parser = DependencyTreeParser(model_path='Stanford Library/stanford-parser-full-%s/edu/stanford/nlp/models/lexparser/englishRNN.ser.gz' % DATE)
   
   #=====================================================================
-  basename = 'Valaquenta'
+  basename = sys.argv[1].decode('utf-8')
   tuples = []
   i = 0
   lps = 0
@@ -486,5 +486,5 @@ if __name__ == '__main__':
         print 'Line %d/%d: %.1f lpm, %dh %.1fm left         \r' % (i, lines, lpm, etc_h, etc_m),
         sys.stdout.flush()
   except:
-    print 'Stopped while parsing line %d' % i
+    print 'Stopped while parsing line %d   ' % i
   pkl.dump(tuples, open('Pickle Jar/%s.pkl'%basename, 'w'), protocol=pkl.HIGHEST_PROTOCOL)
