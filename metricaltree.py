@@ -32,7 +32,7 @@ sent_splitter = nltk.data.load('tokenizers/punkt/english.pickle')
 def parse_worker(q):
   """"""
   
-  parser = DependencyTreeParser(model_path='Stanford Library/sstanford-parser-full-%s/edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz' % DATE)
+  parser = DependencyTreeParser(model_path='Stanford Library/stanford-parser-full-%s/edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz' % DATE)
   parser = MetricalTreeParser(parser)
   for filename in iter(q.get, 'STOP'):
     print 'Working on %s...' % filename
