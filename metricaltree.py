@@ -37,11 +37,11 @@ def parse_worker(q):
   for filename in iter(q.get, 'STOP'):
     print 'Working on %s...' % filename
     sents = []
-    with codecs.open('Addresses/%s' % filename, encoding='utf-8') as f:
+    with codecs.open(filename, encoding='utf-8') as f:
       for line in f:
         sents.extend(pause_splitter(line))
     df = parser.stats_raw_parse_sents(sents, arto=True)
-    df.to_csv(codecs.open('Addresses/%s.csv' % filename[:-4], 'w', encoding='utf-8'), index=False)
+    df.to_csv(codecs.open('%s.csv' % filename, 'w', encoding='utf-8'), index=False)
     print 'Finished with %s.' % filename
   return True
   
@@ -930,14 +930,16 @@ if __name__ == '__main__':
   import glob
   import re
   import multiprocessing as mp
+  import sys
   
+  files = sys.argv[1:]
   try:
     workers = mp.cpu_count()
   except:
     workers = 1
   
   q = mp.Queue()
-  for filename in glob.glob('Addresses/*.txt'):
+  for filename in files:
     q.put(filename)
   for worker in xrange(workers):
     q.put('STOP')
