@@ -4,6 +4,7 @@
 #9/06/15: 1330-1945
 #9/08/15: 1130-1430
 #9/15 3:30-6:30 <- taken care of?
+#11/25 eh, like 30 mins
 
 import os
 from collections import defaultdict
