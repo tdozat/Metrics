@@ -672,12 +672,14 @@ class MetricalTreeParser:
         data['sent'].append(sent)
         data['ambig1'].append(ambig1)
         data['ambig2'].append(ambig2)
+      data['contour'].extend([' '.join(data['mean'][-(j):])]*j)
     for k, v in data:
       data[k] = pd.Series(data[v])
     return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'])
+                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
+                                       'contour'])
   
   #=====================================================================
   # Parse a string into phrasal Metrical Trees
@@ -731,14 +733,17 @@ class MetricalTreeParser:
         data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
         data['sidx'].append(i)
         data['sent'].append(sent)
-        data['ambig1'].append(ambig1)
-        data['ambig2'].append(ambig2)
+        data['log2(nparse1)'].append(ambig1)
+        data['log2(nparse2)'].append(ambig2)
+      contour = ' '.join(['%.1f']*j) % tuple(data['mmean'][-j:])
+      data['contour'].extend([contour]*j)
     for k, v in data:
       data[k] = pd.Series(data[v])
     return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'])
+                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
+                                       'contour'])
   
   #=====================================================================
   # Parse a string into phrasal Metrical Trees
@@ -792,14 +797,17 @@ class MetricalTreeParser:
         data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
         data['sidx'].append(i)
         data['sent'].append(sent)
-        data['ambig1'].append(ambig1)
-        data['ambig2'].append(ambig2)
+        data['log2(nparse1)'].append(ambig1)
+        data['log2(nparse2)'].append(ambig2)
+      contour = ' '.join(['%.1f']*j) % tuple(data['mmean'][-j:])
+      data['contour'].extend([contour]*j)
     for k, v in data.iteritems():
       data[k] = pd.Series(v)
     return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'ambig1', 'ambig2'])
+                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
+                                       'contour'])
   
   #=====================================================================
   # Parse a list of tagged tokens into phrasal Metrical Trees
@@ -853,14 +861,17 @@ class MetricalTreeParser:
         data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
         data['sidx'].append(i)
         data['sent'].append(sent)
-        data['ambig1'].append(ambig1)
-        data['ambig2'].append(ambig2)
+        data['log2(nparse1)'].append(ambig1)
+        data['log2(nparse2)'].append(ambig2)
+      contour = ' '.join(['%1f']*j) % tuple(data['mmean'][-j:])
+      data['contour'].extend([contour]*j)
     for k, v in data:
       data[k] = pd.Series(data[v])
     return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'])
+                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'
+                                       'contour'])
   
   #=====================================================================
   # Parse a list of tagged tokens into phrasal Metrical Trees
@@ -914,14 +925,17 @@ class MetricalTreeParser:
         data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
         data['sidx'].append(i)
         data['sent'].append(sent)
-        data['ambig1'].append(ambig1)
-        data['ambig2'].append(ambig2)
+        data['log2(nparse1)'].append(ambig1)
+        data['log2(nparse2)'].append(ambig2)
+      contour = ' '.join(['%.1f']*j) % tuple(data['mmean'][-j:])
+      data['contour'].extend([contour]*j)
     for k, v in data:
       data[k] = pd.Series(data[v])
     return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'])
+                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
+                                       'contour'])
   
 #***********************************************************************
 # Test the module
@@ -951,4 +965,4 @@ if __name__ == '__main__':
     processes.append(process)
   for process in processes:
     process.join()
-  print 'Works!'
+  print 'Done!'
