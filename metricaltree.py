@@ -359,6 +359,7 @@ class MetricalTree(DependencyTree):
   
   #=====================================================================
   # Generate all possible trees
+  # Syll=True sets all polysyllabic words to stressed
   def ambiguate(self, syll=False):
     """"""
     
@@ -394,12 +395,8 @@ class MetricalTree(DependencyTree):
         return [self.copy()]
       else:
         alts = []
-        if not syll or np.isnan(self._nsyll) or self._nsyll == 2:
-          self._lstress = -1
-          alts.append(self.copy())
-        else:
-          self._lstress = 0
-          alts.append(self.copy())
+        self._lstress = 0
+        alts.append(self.copy())
         self._lstress = -.5
         return alts
     else:
@@ -422,7 +419,11 @@ class MetricalTree(DependencyTree):
         return [self.copy()]
       else:
         alts = []
-        self._lstress = -1
+        if not syll or self._nsyll > 1 or np.isnan(self._nsyll):
+          self._lstress = -1
+        else:
+          self._lstress = 0
+          
         alts.append(self.copy())
         self._lstress = -.5
         return alts
