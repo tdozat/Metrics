@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python # -*- coding: utf-8 -*-
 #8/31/15: 1200-1600
 #9/06/15: 1330-1945
 #9/08/15: 1130-1430
@@ -83,11 +82,11 @@ class MetricalTree(DependencyTree):
     if self._preterm:
       if self[0].lower() in sylcmu:
         syll_info = sylcmu[self[0].lower()]
-        self._nseg = len(syll_info[0])
+        self._seg = syll_info[0]
         self._nsyll = len(syll_info[1])
         self._nstress = len(filter(lambda x: x[1] in ('P', 'S'), syll_info[1]))
       else:
-        self._nseg = np.nan
+        self._seg = None
         self._nsyll = np.nan
         self._nstress = np.nan
 
@@ -113,11 +112,18 @@ class MetricalTree(DependencyTree):
     return self._stress
   
   #=====================================================================
-  # Get the number of syllables
+  # Get the segments
+  def seg(self):
+    """"""
+    
+    return self._seg if self._seg is not None else []
+  
+  #=====================================================================
+  # Get the number of segments
   def nseg(self):
     """"""
     
-    return self._nseg
+    return len(self._seg) if self._seg is not None else np.nan
   
   #=====================================================================
   # Get the number of syllables
@@ -347,20 +353,20 @@ class MetricalTree(DependencyTree):
 
   #=====================================================================
   # Approximate the number of ambiguous parses
-  def ambiguity(self, syll=False):
+  def ambiguity(self, stress_polysyll=False):
     """"""
     
     nambig = 0
     for preterminal in self.preterminals():
       if preterminal.lstress() == -.5:
-        if not syll or (preterminal.nsyll() == 1):
+        if not stress_polysyll or (preterminal.nsyll() == 1):
           nambig += 1
     return nambig
   
   #=====================================================================
   # Generate all possible trees
   # Syll=True sets all polysyllabic words to stressed
-  def ambiguate(self, syll=False):
+  def ambiguate(self, stress_polysyll=False):
     """"""
     
     if self._preterm:
@@ -368,7 +374,7 @@ class MetricalTree(DependencyTree):
         return [self.copy()]
       else:
         alts = []
-        if not syll or np.isnan(self._nsyll) or self._nsyll > 2:
+        if not stress_polysyll or self._nsyll == 1:
           self._lstress = -1
           alts.append(self.copy())
         self._lstress = 0
@@ -387,7 +393,7 @@ class MetricalTree(DependencyTree):
     
   #=====================================================================
   # Disambiguate a tree with the maximal stressed pattern
-  def max_stress_disambiguate(self, syll=False):
+  def max_stress_disambiguate(self):
     """"""
     
     if self._preterm:
@@ -402,7 +408,7 @@ class MetricalTree(DependencyTree):
     else:
       alts = [[]]
       for child in self:
-        child_alts = child.max_stress_disambiguate(syll)
+        child_alts = child.max_stress_disambiguate()
         for i in xrange(len(alts)):
           alt = alts.pop(0)
           for child_alt in child_alts:
@@ -411,7 +417,7 @@ class MetricalTree(DependencyTree):
   
   #=====================================================================
   # Disambiguate a tree with the minimal stressed pattern
-  def min_stress_disambiguate(self, syll=False):
+  def min_stress_disambiguate(self, stress_polysyll=False):
     """"""
     
     if self._preterm:
@@ -419,7 +425,7 @@ class MetricalTree(DependencyTree):
         return [self.copy()]
       else:
         alts = []
-        if not syll or self._nsyll > 1 or np.isnan(self._nsyll):
+        if not stress_polysyll or self._nsyll == 1:
           self._lstress = -1
         else:
           self._lstress = 0
@@ -430,7 +436,7 @@ class MetricalTree(DependencyTree):
     else:
       alts = [[]]
       for child in self:
-        child_alts = child.min_stress_disambiguate(syll)
+        child_alts = child.min_stress_disambiguate(stress_polysyll)
         for i in xrange(len(alts)):
           alt = alts.pop(0)
           for child_alt in child_alts:
@@ -561,11 +567,11 @@ class MetricalTreeParser:
   
   #=====================================================================
   # Parse a list of tokens into phrasal Metrical Trees
-  def phr_parse_sents(self, sentences, syll=False, verbose=True):
+  def phr_parse_sents(self, sentences, stress_polysyll=False, verbose=True):
     """"""
     
     for t in self.lex_parse_sents(sentences, verbose):
-      trees = t.disambiguate(syll)
+      trees = t.disambiguate(stress_polysyll)
       for tree in trees:
         tree.set_pstress()
         tree.set_stress()
@@ -573,11 +579,11 @@ class MetricalTreeParser:
   
   #=====================================================================
   # Parse a string into phrasal Metrical Trees
-  def phr_raw_parse(self, sentences, syll=False, verbose=True):
+  def phr_raw_parse(self, sentences, stress_polysyll=False, verbose=True):
     """"""
     
     for t in self.lex_raw_parse(sentences, verbose):
-      trees = t.disambiguate(syll)
+      trees = t.disambiguate(stress_polysyll)
       for tree in trees:
         tree.set_pstress()
         tree.set_stress()
@@ -585,11 +591,11 @@ class MetricalTreeParser:
       
   #=====================================================================
   # Parse a list of strings into phrasal Metrical Trees
-  def phr_raw_parse_sents(self, sentences, syll=False, verbose=True):
+  def phr_raw_parse_sents(self, sentences, stress_polysyll=False, verbose=True):
     """"""
     
     for t in self.lex_raw_parse_sents(sentences, verbose):
-      trees = t.disambiguate(syll)
+      trees = t.disambiguate(stress_polysyll)
       for tree in trees:
         tree.set_pstress()
         tree.set_stress()
@@ -597,11 +603,11 @@ class MetricalTreeParser:
   
   #=====================================================================
   # Parse a list of tagged strings into phrasal Metrical Trees
-  def phr_tagged_parse(self, sentences, syll=False, verbose=True):
+  def phr_tagged_parse(self, sentences, stress_polysyll=False, verbose=True):
     """"""
     
     for t in self.lex_tagged_parse(sentences, verbose):
-      trees = t.disambiguate(syll)
+      trees = t.disambiguate(stress_polysyll)
       for tree in trees:
         tree.set_pstress()
         tree.set_stress()
@@ -609,334 +615,118 @@ class MetricalTreeParser:
   
   #=====================================================================
   # Parse a list of strings into phrasal Metrical Trees
-  def phr_tagged_parse_sents(self, sentences, syll=False, verbose=True):
+  def phr_tagged_parse_sents(self, sentences, stress_polysyll=False, verbose=True):
     """"""
     
     for t in self.lex_tagged_parse_sents(sentences, verbose):
-      trees = t.disambiguate(syll)
+      trees = t.disambiguate(stress_polysyll)
       for tree in trees:
         tree.set_pstress()
         tree.set_stress()
       yield trees
+  
+  #=============================================================
+  def get_stats(self, generator, arto=False):
+    """"""
+    
+    data = defaultdict(list)
+    i = 0
+    for t in generator:
+      i += 1
+      ambig1 = t.ambiguity(stress_polysyll=False)
+      ambig2 = t.ambiguity(stress_polysyll=True)
+      tree1 = t.max_stress_disambiguate()[0]
+      tree1.set_pstress()
+      tree1.set_stress()
+      tree2a = t.min_stress_disambiguate(stress_polysyll=True)[0]
+      tree2a.set_pstress()
+      tree2a.set_stress()
+      tree2b = t.min_stress_disambiguate(stress_polysyll=False)[0]
+      tree2b.set_pstress()
+      tree2b.set_stress()
+      
+      j = 0
+      preterms1 = tree1.preterminals()
+      preterms2a = tree2a.preterminals()
+      preterms2b = tree2b.preterminals()
+      preterms_raw = t.preterminals()
+      sent = ' '.join([preterm[0] for preterm in t.preterminals()])
+      for preterm1, preterm2a, preterm2b, preterm_raw in zip(preterms1, preterms2a, preterms2b, preterms_raw):
+        j += 1
+        data['widx'].append(j)
+        data['word'].append(preterm1[0])
+        if preterm_raw._lstress == 0:
+          data['lexstress'].append('yes')
+        elif preterm_raw._lstress == -.5:
+          data['lexstress'].append('ambig')
+        elif preterm_raw._lstress == -1:
+          data['lexstress'].append('no')
+        else:
+          data['lexstress'].append('???')
+        data['seg'].append(' '.join(preterm1.seg()))
+        data['nseg'].append(preterm1.nseg())
+        data['nsyll'].append(preterm1.nsyll())
+        data['nstress'].append(preterm1.nstress())
+        data['pos'].append(preterm1.category())
+        data['dep'].append(preterm1.dependency())
+        if arto:
+          data['m1'].append(-(preterm1.stress()-1))
+          data['m2a'].append(-(preterm2a.stress()-1))
+          data['m2b'].append(-(preterm2b.stress()-1))
+          data['mean'].append(-(np.mean([preterm1.stress(), preterm2a.stress(), preterm2b.stress()])-1))
+        else:
+          data['m1'].append(preterm1.stress())
+          data['m2a'].append(preterm2a.stress())
+          data['m2b'].append(preterm2b.stress())
+          data['mean'].append(np.mean([preterm1.stress(), preterm2a.stress(), preterm2b.stress()]))
+        data['sidx'].append(i)
+        data['sent'].append(sent)
+        data['ambig_words'].append(ambig1)
+        data['ambig_monosyll'].append(ambig2)
+      data['contour'].extend([' '.join(str(x) for x in data['mean'][-(j):])]*j)
+    for k, v in data.iteritems():
+      data[k] = pd.Series(v)
+    return pd.DataFrame(data, columns=['widx', 'word', 'seg', 'lexstress',
+                                       'nseg', 'nsyll', 'nstress',
+                                       'pos', 'dep',
+                                       'm1', 'm2a', 'm2b', 'mean',
+                                       'sidx', 'sent', 'ambig_words', 'ambig_monosyll',
+                                       'contour'])
   
   #=====================================================================
   # Parse a list of tokens into phrasal Metrical Trees
   def stats_parse_sents(self, sentences, arto=False, verbose=True):
     """"""
     
-    data = defaultdict(list)
-    i = 0
-    for t in self.lex_parse_sents(sentences, verbose):
-      i += 1
-      ambig1 = t.ambiguity(syll=False)
-      ambig2 = t.ambiguity(syll=True)
-      tree1a = t.max_stress_disambiguate(syll=False)[0]
-      tree1a.set_pstress()
-      tree1a.set_stress()
-      tree1b = t.min_stress_disambiguate(syll=False)[0]
-      tree1b.set_pstress()
-      tree1b.set_stress()
-      tree2a = t.max_stress_disambiguate(syll=True)[0]
-      tree2a.set_pstress()
-      tree2a.set_stress()
-      tree2b = t.min_stress_disambiguate(syll=True)[0]
-      tree2b.set_pstress()
-      tree2b.set_stress()
-      
-      j = 0
-      preterms1a = tree1a.preterminals()
-      preterms1b = tree1b.preterminals()
-      preterms2a = tree2a.preterminals()
-      preterms2b = tree2b.preterminals()
-      sent = ' '.join([preterm[0] for preterm in preterms1a])
-      for preterm1a, preterm1b, preterm2a, preterm2b in zip(preterms1a, preterms1b, preterms2a, preterms2b):
-        j += 1
-        data['widx'].append(j)
-        data['word'].append(preterm1a[0])
-        data['nseg'].append(preterm1a.nseg())
-        data['nsyll'].append(preterm1a.nsyll())
-        data['nstress'].append(preterm1a.nstress())
-        data['pos'].append(preterm1a.category())
-        data['dep'].append(preterm1a.dependency())
-        if arto:
-          data['m1a'].append(-(preterm1a.stress()-1))
-          data['m1b'].append(-(preterm1b.stress()-1))
-          data['m2a'].append(-(preterm2a.stress()-1))
-          data['m2b'].append(-(preterm2b.stress()-1))
-        else:
-          data['m1a'].append(preterm1a.stress())
-          data['m1b'].append(preterm1b.stress())
-          data['m2a'].append(preterm2a.stress())
-          data['m2b'].append(preterm2b.stress())
-        data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
-        data['sidx'].append(i)
-        data['sent'].append(sent)
-        data['ambig1'].append(ambig1)
-        data['ambig2'].append(ambig2)
-      data['contour'].extend([' '.join(data['mean'][-(j):])]*j)
-    for k, v in data:
-      data[k] = pd.Series(data[v])
-    return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
-                                       'pos', 'dep',
-                                       'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
-                                       'contour'])
+    return self.get_stats(self.lex_parse_sents(sentences, verbose), arto=arto)
   
   #=====================================================================
   # Parse a string into phrasal Metrical Trees
   def stats_raw_parse(self, sentence, arto=False, verbose=True):
     """"""
     
-    data = defaultdict(list)
-    i = 0
-    for t in self.lex_raw_parse(sentence, verbose):
-      i += 1
-      ambig1 = t.ambiguity(syll=False)
-      ambig2 = t.ambiguity(syll=True)
-      tree1a = t.max_stress_disambiguate(syll=False)[0]
-      tree1a.set_pstress()
-      tree1a.set_stress()
-      tree1b = t.min_stress_disambiguate(syll=False)[0]
-      tree1b.set_pstress()
-      tree1b.set_stress()
-      tree2a = t.max_stress_disambiguate(syll=True)[0]
-      tree2a.set_pstress()
-      tree2a.set_stress()
-      tree2b = t.min_stress_disambiguate(syll=True)[0]
-      tree2b.set_pstress()
-      tree2b.set_stress()
-      
-      j = 0
-      preterms1a = tree1a.preterminals()
-      preterms1b = tree1b.preterminals()
-      preterms2a = tree2a.preterminals()
-      preterms2b = tree2b.preterminals()
-      sent = ' '.join([preterm[0] for preterm in preterms1a])
-      for preterm1a, preterm1b, preterm2a, preterm2b in zip(preterms1a, preterms1b, preterms2a, preterms2b):
-        j += 1
-        data['widx'].append(j)
-        data['word'].append(preterm1a[0])
-        data['nseg'].append(preterm1a.nseg())
-        data['nsyll'].append(preterm1a.nsyll())
-        data['nstress'].append(preterm1a.nstress())
-        data['pos'].append(preterm1a.category())
-        data['dep'].append(preterm1a.dependency())
-        if arto:
-          data['m1a'].append(-(preterm1a.stress()-1))
-          data['m1b'].append(-(preterm1b.stress()-1))
-          data['m2a'].append(-(preterm2a.stress()-1))
-          data['m2b'].append(-(preterm2b.stress()-1))
-        else:
-          data['m1a'].append(preterm1a.stress())
-          data['m1b'].append(preterm1b.stress())
-          data['m2a'].append(preterm2a.stress())
-          data['m2b'].append(preterm2b.stress())
-        data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
-        data['sidx'].append(i)
-        data['sent'].append(sent)
-        data['log2(nparse1)'].append(ambig1)
-        data['log2(nparse2)'].append(ambig2)
-      contour = ' '.join(['%.1f']*j) % tuple(data['mmean'][-j:])
-      data['contour'].extend([contour]*j)
-    for k, v in data:
-      data[k] = pd.Series(data[v])
-    return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
-                                       'pos', 'dep',
-                                       'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
-                                       'contour'])
+    return self.get_stats(self.lex_raw_parse(sentence, verbose), arto=arto)
   
   #=====================================================================
   # Parse a string into phrasal Metrical Trees
   def stats_raw_parse_sents(self, sentences, arto=False, verbose=True):
     """"""
     
-    data = defaultdict(list)
-    i = 0
-    for t in self.lex_raw_parse_sents(sentences, verbose):
-      i += 1
-      ambig1 = t.ambiguity(syll=False)
-      ambig2 = t.ambiguity(syll=True)
-      tree1a = t.max_stress_disambiguate(syll=False)[0]
-      tree1a.set_pstress()
-      tree1a.set_stress()
-      tree1b = t.min_stress_disambiguate(syll=False)[0]
-      tree1b.set_pstress()
-      tree1b.set_stress()
-      tree2a = t.max_stress_disambiguate(syll=True)[0]
-      tree2a.set_pstress()
-      tree2a.set_stress()
-      tree2b = t.min_stress_disambiguate(syll=True)[0]
-      tree2b.set_pstress()
-      tree2b.set_stress()
-      
-      j = 0
-      preterms1a = list(tree1a.preterminals())
-      preterms1b = list(tree1b.preterminals())
-      preterms2a = list(tree2a.preterminals())
-      preterms2b = list(tree2b.preterminals())
-      sent = ' '.join([preterm[0] for preterm in preterms1a])
-      for preterm1a, preterm1b, preterm2a, preterm2b in zip(preterms1a, preterms1b, preterms2a, preterms2b):
-        j += 1
-        data['widx'].append(j)
-        data['word'].append(preterm1a[0])
-        data['nseg'].append(preterm1a.nseg())
-        data['nsyll'].append(preterm1a.nsyll())
-        data['nstress'].append(preterm1a.nstress())
-        data['pos'].append(preterm1a.category())
-        data['dep'].append(preterm1a.dependency())
-        if arto:
-          data['m1a'].append(-(preterm1a.stress()-1))
-          data['m1b'].append(-(preterm1b.stress()-1))
-          data['m2a'].append(-(preterm2a.stress()-1))
-          data['m2b'].append(-(preterm2b.stress()-1))
-        else:
-          data['m1a'].append(preterm1a.stress())
-          data['m1b'].append(preterm1b.stress())
-          data['m2a'].append(preterm2a.stress())
-          data['m2b'].append(preterm2b.stress())
-        data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
-        data['sidx'].append(i)
-        data['sent'].append(sent)
-        data['log2(nparse1)'].append(ambig1)
-        data['log2(nparse2)'].append(ambig2)
-      contour = ' '.join(['%.1f']*j) % tuple(data['mmean'][-j:])
-      data['contour'].extend([contour]*j)
-    for k, v in data.iteritems():
-      data[k] = pd.Series(v)
-    return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
-                                       'pos', 'dep',
-                                       'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
-                                       'contour'])
-  
+    return self.get_stats(self.lex_raw_parse_sents(sentences, verbose), arto=arto)
+    
   #=====================================================================
   # Parse a list of tagged tokens into phrasal Metrical Trees
   def stats_tagged_parse(self, sentence, arto=False, verbose=True):
     """"""
     
-    data = defaultdict(list)
-    i = 0
-    for t in self.lex_tagged_parse(sentence, verbose):
-      i += 1
-      ambig1 = t.ambiguity(syll=False)
-      ambig2 = t.ambiguity(syll=True)
-      tree1a = t.max_stress_disambiguate(syll=False)[0]
-      tree1a.set_pstress()
-      tree1a.set_stress()
-      tree1b = t.min_stress_disambiguate(syll=False)[0]
-      tree1b.set_pstress()
-      tree1b.set_stress()
-      tree2a = t.max_stress_disambiguate(syll=True)[0]
-      tree2a.set_pstress()
-      tree2a.set_stress()
-      tree2b = t.min_stress_disambiguate(syll=True)[0]
-      tree2b.set_pstress()
-      tree2b.set_stress()
-      
-      j = 0
-      preterms1a = tree1a.preterminals()
-      preterms1b = tree1b.preterminals()
-      preterms2a = tree2a.preterminals()
-      preterms2b = tree2b.preterminals()
-      sent = ' '.join([preterm[0] for preterm in preterms1a])
-      for preterm1a, preterm1b, preterm2a, preterm2b in zip(preterms1a, preterms1b, preterms2a, preterms2b):
-        j += 1
-        data['widx'].append(j)
-        data['word'].append(preterm1a[0])
-        data['nseg'].append(preterm1a.nseg())
-        data['nsyll'].append(preterm1a.nsyll())
-        data['nstress'].append(preterm1a.nstress())
-        data['pos'].append(preterm1a.category())
-        data['dep'].append(preterm1a.dependency())
-        if arto:
-          data['m1a'].append(-(preterm1a.stress()-1))
-          data['m1b'].append(-(preterm1b.stress()-1))
-          data['m2a'].append(-(preterm2a.stress()-1))
-          data['m2b'].append(-(preterm2b.stress()-1))
-        else:
-          data['m1a'].append(preterm1a.stress())
-          data['m1b'].append(preterm1b.stress())
-          data['m2a'].append(preterm2a.stress())
-          data['m2b'].append(preterm2b.stress())
-        data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
-        data['sidx'].append(i)
-        data['sent'].append(sent)
-        data['log2(nparse1)'].append(ambig1)
-        data['log2(nparse2)'].append(ambig2)
-      contour = ' '.join(['%1f']*j) % tuple(data['mmean'][-j:])
-      data['contour'].extend([contour]*j)
-    for k, v in data:
-      data[k] = pd.Series(data[v])
-    return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
-                                       'pos', 'dep',
-                                       'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)'
-                                       'contour'])
+    return self.get_stats(self.lex_tagged_parse(sentence, verbose), arto=arto)
   
   #=====================================================================
   # Parse a list of tagged tokens into phrasal Metrical Trees
   def stats_tagged_parse_sents(self, sentences, arto=False, verbose=True):
     """"""
     
-    data = defaultdict(list)
-    i = 0
-    for t in self.lex_tagged_parse_sents(sentence, verbose):
-      i += 1
-      ambig1 = t.ambiguity(syll=False)
-      ambig2 = t.ambiguity(syll=True)
-      tree1a = t.max_stress_disambiguate(syll=False)[0]
-      tree1a.set_pstress()
-      tree1a.set_stress()
-      tree1b = t.min_stress_disambiguate(syll=False)[0]
-      tree1b.set_pstress()
-      tree1b.set_stress()
-      tree2a = t.max_stress_disambiguate(syll=True)[0]
-      tree2a.set_pstress()
-      tree2a.set_stress()
-      tree2b = t.min_stress_disambiguate(syll=True)[0]
-      tree2b.set_pstress()
-      tree2b.set_stress()
-      
-      j = 0
-      preterms1a = tree1a.preterminals()
-      preterms1b = tree1b.preterminals()
-      preterms2a = tree2a.preterminals()
-      preterms2b = tree2b.preterminals()
-      sent = ' '.join([preterm[0] for preterm in preterms1a])
-      for preterm1a, preterm1b, preterm2a, preterm2b in zip(preterms1a, preterms1b, preterms2a, preterms2b):
-        j += 1
-        data['widx'].append(j)
-        data['word'].append(preterm1a[0])
-        data['nseg'].append(preterm1a.nseg())
-        data['nsyll'].append(preterm1a.nsyll())
-        data['nstress'].append(preterm1a.nstress())
-        data['pos'].append(preterm1a.category())
-        data['dep'].append(preterm1a.dependency())
-        if arto:
-          data['m1a'].append(-(preterm1a.stress()-1))
-          data['m1b'].append(-(preterm1b.stress()-1))
-          data['m2a'].append(-(preterm2a.stress()-1))
-          data['m2b'].append(-(preterm2b.stress()-1))
-        else:
-          data['m1a'].append(preterm1a.stress())
-          data['m1b'].append(preterm1b.stress())
-          data['m2a'].append(preterm2a.stress())
-          data['m2b'].append(preterm2b.stress())
-        data['mmean'].append(np.mean([preterm1a.stress(), preterm1b.stress(), preterm2a.stress(), preterm2b.stress()]))
-        data['sidx'].append(i)
-        data['sent'].append(sent)
-        data['log2(nparse1)'].append(ambig1)
-        data['log2(nparse2)'].append(ambig2)
-      contour = ' '.join(['%.1f']*j) % tuple(data['mmean'][-j:])
-      data['contour'].extend([contour]*j)
-    for k, v in data:
-      data[k] = pd.Series(data[v])
-    return pd.DataFrame(data, columns=['widx', 'word', 'nseg', 'nsyll', 'nstress',
-                                       'pos', 'dep',
-                                       'm1a', 'm1b', 'm2a', 'm2b', 'mmean',
-                                       'sidx', 'sent', 'log2(nparse1)', 'log2(nparse2)',
-                                       'contour'])
+    return self.get_stats(self.lex_tagged_parse_sents(sentence, verbose), arto=arto)
   
 #***********************************************************************
 # Test the module
