@@ -646,16 +646,24 @@ class MetricalTreeParser:
       tree2b.set_stress()
       
       j = 0
-      preterms1 = tree1.preterminals()
-      preterms2a = tree2a.preterminals()
-      preterms2b = tree2b.preterminals()
-      preterms_raw = t.preterminals()
-      sent = ' '.join([preterm[0] for preterm in t.preterminals()])
-      sentlen = len(list(t.preterminals()))
+      preterms1 = list(tree1.preterminals())
+      min1 = float(min([preterm.stress() for preterm in preterms1 if not np.isnan(preterm.stress())]))
+      max1 = max([preterm.stress() for preterm in preterms1 if not np.isnan(preterm.stress())]) - min1
+      preterms2a = list(tree2a.preterminals())
+      min2a = float(min([preterm.stress() for preterm in preterms2a if not np.isnan(preterm.stress())]))
+      max2a = max([preterm.stress() for preterm in preterms2a if not np.isnan(preterm.stress())]) - min2a
+      preterms2b = list(tree2b.preterminals())
+      min2b = float(min([preterm.stress() for preterm in preterms2b if not np.isnan(preterm.stress())]))
+      max2b = max([preterm.stress() for preterm in preterms2b if not np.isnan(preterm.stress())]) - min2b
+      preterms_raw = list(t.preterminals())
+      minmean = float(min([np.mean([preterm1.stress(), preterm2a.stress(), preterm2b.stress()]) for preterm1, preterm2a, preterm2b in zip(preterms1, preterms2a, preterms2b) if not np.isnan(preterm1.stress())]))
+      maxmean = max([np.mean([preterm1.stress(), preterm2a.stress(), preterm2b.stress()]) for preterm1, preterm2a, preterm2b in zip(preterms1, preterms2a, preterms2b) if not np.isnan(preterm1.stress())]) - minmean
+      sent = ' '.join([preterm[0] for preterm in preterms_raw])
+      sentlen = len(preterms_raw)
       for preterm1, preterm2a, preterm2b, preterm_raw in zip(preterms1, preterms2a, preterms2b, preterms_raw):
         j += 1
         data['widx'].append(j)
-        data['rel_widx'].append(float(j) / sentlen)
+        data['norm_widx'].append(float(j) / sentlen)
         data['word'].append(preterm1[0])
         if preterm_raw._lstress == 0:
           data['lexstress'].append('yes')
@@ -681,6 +689,10 @@ class MetricalTreeParser:
           data['m2a'].append(preterm2a.stress())
           data['m2b'].append(preterm2b.stress())
           data['mean'].append(np.mean([preterm1.stress(), preterm2a.stress(), preterm2b.stress()]))
+        data['norm_m1'].append((preterm1.stress()-min1)/max1)
+        data['norm_m2a'].append((preterm2a.stress()-min2a)/max2a)
+        data['norm_m2b'].append((preterm2b.stress()-min2b)/max2b)
+        data['norm_mean'].append((np.mean([preterm1.stress(), preterm2a.stress(), preterm2b.stress()])-minmean)/maxmean)
         data['sidx'].append(i)
         data['sent'].append(sent)
         data['ambig_words'].append(ambig1)
@@ -688,10 +700,11 @@ class MetricalTreeParser:
       data['contour'].extend([' '.join(str(x) for x in data['mean'][-(j):])]*j)
     for k, v in data.iteritems():
       data[k] = pd.Series(v)
-    return pd.DataFrame(data, columns=['widx', 'rel_widx', 'word', 'seg', 'lexstress',
+    return pd.DataFrame(data, columns=['widx', 'norm_widx', 'word', 'seg', 'lexstress',
                                        'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1', 'm2a', 'm2b', 'mean',
+                                       'norm_m1', 'norm_m2a', 'norm_m2b', 'norm_mean',
                                        'sidx', 'sent', 'ambig_words', 'ambig_monosyll',
                                        'contour'])
   
