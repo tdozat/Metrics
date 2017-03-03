@@ -651,9 +651,11 @@ class MetricalTreeParser:
       preterms2b = tree2b.preterminals()
       preterms_raw = t.preterminals()
       sent = ' '.join([preterm[0] for preterm in t.preterminals()])
+      sentlen = len(list(t.preterminals()))
       for preterm1, preterm2a, preterm2b, preterm_raw in zip(preterms1, preterms2a, preterms2b, preterms_raw):
         j += 1
         data['widx'].append(j)
+        data['rel_widx'].append(float(j) / sentlen)
         data['word'].append(preterm1[0])
         if preterm_raw._lstress == 0:
           data['lexstress'].append('yes')
@@ -686,7 +688,7 @@ class MetricalTreeParser:
       data['contour'].extend([' '.join(str(x) for x in data['mean'][-(j):])]*j)
     for k, v in data.iteritems():
       data[k] = pd.Series(v)
-    return pd.DataFrame(data, columns=['widx', 'word', 'seg', 'lexstress',
+    return pd.DataFrame(data, columns=['widx', 'rel_widx', 'word', 'seg', 'lexstress',
                                        'nseg', 'nsyll', 'nstress',
                                        'pos', 'dep',
                                        'm1', 'm2a', 'm2b', 'mean',
